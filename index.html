@@ -50,7 +50,7 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 <section class="section"><div class="head"><div class="title"><div class="n">3</div><div><h2>순서 및 개별 크기</h2><div class="sub">모든 디자인은 선택한 로고 폭으로 동일하게 제작되며, 항목을 드래그해 순서만 변경할 수 있습니다.</div></div></div></div><div id="list" class="list"></div></section>
 
 <section class="section"><div class="head"><div class="title"><div class="n">4</div><div><h2>실시간 미리보기 및 견적</h2><div class="sub">실제 PNG 비율을 사용해 자동 계산합니다.</div></div></div></div>
-<div class="preview-grid"><div class="stage"><div id="sheet" class="sheet"></div></div><aside class="quote"><div class="ql">ESTIMATED PRICE</div><div id="price" class="price">15,000원</div><div id="priceNote" style="display:none;margin:-10px 0 14px;color:#ff9b78;font-size:11px;font-weight:800">최소 주문금액이 적용되었습니다.</div><div class="row"><span>선택 로고 폭</span><b id="logoWidthText">220 mm</b></div><div class="row"><span>가격 계산 면적</span><b id="area">0 cm²</b></div><div class="row"><span>선택 디자인</span><b id="qcnt">0개</b></div><div class="row"><span>면적 단가</span><b>30원/cm²</b></div><div class="row"><span>최소 주문금액</span><b>15,000원</b></div><div class="formula">로고 폭 × 제작 높이 ÷ 100 × 30원<br><span style="color:#87919c">좌우 여유폭 40mm는 가격에서 제외</span></div><div id="warn" class="warn">최대 제작 높이 1,000mm를 초과했습니다. 디자인 개수를 줄이거나 로고 폭을 줄여주세요.</div><div id="okay" class="okay">제작 가능한 구성입니다.</div><button id="order" class="action" disabled>이 구성으로 주문하기</button><button id="copy" class="secondary">주문정보 복사</button><button id="reset" class="secondary">처음부터 다시 만들기</button></aside></div>
+<div class="preview-grid"><div class="stage"><div id="sheet" class="sheet"></div></div><aside class="quote"><div class="ql">ESTIMATED PRICE</div><div id="price" class="price">15,000원</div><div id="priceNote" style="display:none;margin:-10px 0 14px;color:#ff9b78;font-size:11px;font-weight:800">최소 주문금액이 적용되었습니다.</div><div class="row"><span>선택 로고 폭</span><b id="logoWidthText">220 mm</b></div><div class="row"><span>총 길이</span><b id="totalLength">0 mm</b></div><div class="row"><span>가격 계산 면적</span><b id="area">0 cm²</b></div><div class="row"><span>선택 디자인</span><b id="qcnt">0개</b></div><div class="row"><span>면적 단가</span><b>30원/cm²</b></div><div class="row"><span>최소 주문금액</span><b>15,000원</b></div><div class="formula">로고 폭 × 제작 높이 ÷ 100 × 30원<br><span style="color:#87919c">좌우 여유폭 40mm는 가격에서 제외</span></div><div id="warn" class="warn">최대 제작 높이 1,000mm를 초과했습니다. 디자인 개수를 줄이거나 로고 폭을 줄여주세요.</div><div id="okay" class="okay">제작 가능한 구성입니다.</div><button id="order" class="action" disabled>이 구성으로 주문하기</button><button id="copy" class="secondary">주문정보 복사</button><button id="reset" class="secondary">처음부터 다시 만들기</button></aside></div>
 </section>
 </main>
 <div class="footer"><b style="color:#d9dfe5">제작 안내</b><br>국내산 백색 커팅 시트를 플로터로 재단한 후 위딩 작업과 전사필름 부착까지 완료하여 발송합니다. 선택한 로고 폭에 좌우 각 20mm의 작업 여유를 추가해 제작하며, 이 40mm 여유폭은 가격 계산에서 제외됩니다. 인쇄 및 코팅 제품이 아닙니다.</div>
@@ -80,7 +80,7 @@ function render(){
  document.querySelectorAll('.logo').forEach(b=>b.classList.toggle('active',selected.some(x=>x.id===b.dataset.id)));
  $('cnt').textContent=selected.length;
  renderList();const d=calc();renderSheet(d);
- $('price').textContent=d.price.toLocaleString('ko-KR')+'원';$('priceNote').style.display=(d.minimumApplied&&selected.length)?'block':'none';$('logoWidthText').textContent=d.logoWidth+' mm';$('area').textContent=d.area.toLocaleString('ko-KR',{maximumFractionDigits:0})+' cm²';$('qcnt').textContent=selected.length+'개';
+ $('price').textContent=d.price.toLocaleString('ko-KR')+'원';$('priceNote').style.display=(d.minimumApplied&&selected.length)?'block':'none';$('logoWidthText').textContent=d.logoWidth+' mm';$('totalLength').textContent=d.h+' mm';$('area').textContent=d.area.toLocaleString('ko-KR',{maximumFractionDigits:0})+' cm²';$('qcnt').textContent=selected.length+'개';
  $('warn').style.display=d.over?'block':'none';$('okay').style.display=(!d.over&&selected.length)?'block':'none';$('order').disabled=d.over||!selected.length
 }
 function renderList(){
@@ -97,6 +97,7 @@ function renderSheet(d){
 function text(){const d=calc();return `[RIGFORGE Seat Decal 주문정보]
 디자인 순서: ${selected.map((x,i)=>`${i+1}. ${x.name}`).join(' / ')}
 선택 로고 폭: ${d.logoWidth}mm
+총 길이: ${d.h}mm
 좌우 제작 여유: 각 20mm (가격 제외)
 로고 간격: ${d.gap}mm
 가격 계산 면적: ${d.area}cm²
