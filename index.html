@@ -31,8 +31,10 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(15px);opacity:0;background:#fff;color:#111;padding:11px 15px;border-radius:9px;font-weight:800;font-size:12px;transition:.2s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 .order-help{margin-top:11px;padding:11px;border-radius:9px;background:#111820;border:1px solid #294052;color:#b9c9d7;font-size:11px;line-height:1.65}.order-help b{color:#fff}
-.order-modal{position:fixed;inset:0;z-index:999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.76);backdrop-filter:blur(5px)}.order-modal.show{display:flex}.order-card{width:430px;max-width:100%;border:1px solid #3a424c;border-radius:18px;background:#12161b;box-shadow:0 25px 80px rgba(0,0,0,.6);padding:25px;text-align:center}.order-card .success{width:54px;height:54px;margin:0 auto 13px;border-radius:50%;display:grid;place-items:center;background:#113224;border:1px solid #286744;color:#72e2a8;font-size:26px;font-weight:900}.order-card h3{margin:0 0 8px;font-size:21px}.order-card p{margin:0;color:#9ea8b2;font-size:13px;line-height:1.65}.quote-number{margin:17px 0 9px;padding:14px;border-radius:11px;background:#0a0d11;border:1px solid #343b44;color:#fff;font-size:24px;font-weight:950;letter-spacing:.08em}.order-summary-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.order-summary-mini div{padding:10px;border-radius:9px;background:#191e24;border:1px solid #2c333b}.order-summary-mini span{display:block;color:#85909b;font-size:10px;margin-bottom:4px}.order-summary-mini b{font-size:15px}.countdown{margin-top:15px;color:#ff9a75;font-weight:850;font-size:12px}.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}.modal-actions button,.modal-actions a{height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;font-weight:850}.modal-copy{border:1px solid #3b444e;background:#1a2027;color:#e3e8ed}.modal-go{border:0;background:var(--orange);color:#fff}.server-note{margin-top:12px;color:#76818c;font-size:10px;line-height:1.5}
-@media(max-width:700px){.logo-grid{grid-template-columns:repeat(2,1fr)}.preview-grid{grid-template-columns:1fr}.quote{position:static}.item{grid-template-columns:28px 58px 1fr 70px}.thumb{width:58px}.del{grid-column:auto}.hero h1{font-size:33px}}
+.order-modal{position:fixed;inset:0;z-index:999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.76);backdrop-filter:blur(5px)}.order-modal.show{display:flex}.order-card{position:relative;width:430px;max-width:100%;border:1px solid #3a424c;border-radius:18px;background:#12161b;box-shadow:0 25px 80px rgba(0,0,0,.6);padding:25px;text-align:center}.modal-close{position:absolute;right:13px;top:13px;width:34px;height:34px;border:1px solid #343c45;border-radius:9px;background:#1a2026;color:#dbe1e6;font-size:20px;line-height:1;cursor:pointer}.modal-close:hover{background:#252c34;color:#fff}.order-card .success{width:54px;height:54px;margin:0 auto 13px;border-radius:50%;display:grid;place-items:center;background:#113224;border:1px solid #286744;color:#72e2a8;font-size:26px;font-weight:900}.order-card h3{margin:0 0 8px;font-size:21px}.order-card p{margin:0;color:#9ea8b2;font-size:13px;line-height:1.65}.quote-number{margin:17px 0 9px;padding:14px;border-radius:11px;background:#0a0d11;border:1px solid #343b44;color:#fff;font-size:24px;font-weight:950;letter-spacing:.08em}.order-summary-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.order-summary-mini div{padding:10px;border-radius:9px;background:#191e24;border:1px solid #2c333b}.order-summary-mini span{display:block;color:#85909b;font-size:10px;margin-bottom:4px}.order-summary-mini b{font-size:15px}.modal-guide{margin-top:15px;color:#ffb092;font-weight:800;font-size:11px;line-height:1.6}.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}.modal-actions button,.modal-actions a{height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;font-weight:850;cursor:pointer}.modal-copy{border:1px solid #3b444e;background:#1a2027;color:#e3e8ed}.modal-save{border:1px solid #3b444e;background:#242b33;color:#fff}.modal-go{grid-column:1/-1;border:0;background:var(--orange);color:#fff}.server-note{margin-top:12px;color:#76818c;font-size:10px;line-height:1.5}
+
+.quote-history{margin:0 20px 28px;padding:19px;border:1px solid var(--line);border-radius:18px;background:rgba(19,23,28,.97)}.history-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.history-head h2{margin:0}.history-clear{border:1px solid #4a3438;background:#211619;color:#ff9ca5;border-radius:8px;padding:8px 10px;font-size:11px;cursor:pointer}.history-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.history-empty{grid-column:1/-1;padding:26px;text-align:center;border:1px dashed #38404a;border-radius:11px;color:#7d8792;background:#0e1217;font-size:12px}.history-card{overflow:hidden;border:1px solid var(--line);border-radius:13px;background:#0d1116}.history-preview{width:100%;height:220px;display:block;object-fit:contain;background:#090c10;border-bottom:1px solid var(--line)}.history-body{padding:13px}.history-no{font-weight:950;letter-spacing:.05em;font-size:15px}.history-date{margin-top:4px;color:#7f8994;font-size:10px}.history-info{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:11px}.history-info div{padding:8px;border-radius:8px;background:#171c22;border:1px solid #292f36}.history-info span{display:block;color:#7f8994;font-size:9px;margin-bottom:3px}.history-info b{font-size:12px}.history-logos{margin-top:9px;color:#a9b2bb;font-size:10px;line-height:1.55}.history-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:11px}.history-actions button,.history-actions a{height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:10px;font-weight:850;cursor:pointer}.history-copy{border:1px solid #38414b;background:#181e24;color:#dce2e7}.history-download{border:0;background:#2a3139;color:#fff}.history-delete{grid-column:1/-1;border:1px solid #4d3035!important;background:#211417!important;color:#ff9ca5!important}
+@media(max-width:700px){.logo-grid{grid-template-columns:repeat(2,1fr)}.preview-grid{grid-template-columns:1fr}.quote{position:static}.item{grid-template-columns:28px 58px 1fr 70px}.thumb{width:58px}.del{grid-column:auto}.hero h1{font-size:33px}.history-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body><div class="wrap">
@@ -57,9 +59,11 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 </section>
 </main>
 <div class="footer"><b style="color:#d9dfe5">제작 안내</b><br>국내산 백색 커팅 시트를 플로터로 재단한 후 위딩 작업과 전사필름 부착까지 완료하여 발송합니다. 선택한 로고 폭에 좌우 각 20mm의 작업 여유를 추가해 제작하며, 이 40mm 여유폭은 가격 계산에서 제외됩니다. 인쇄 및 코팅 제품이 아닙니다.</div>
+<section class="quote-history"><div class="history-head"><div><h2>내 견적 내역</h2><div class="sub">이 브라우저에서 저장한 견적과 미리보기 이미지입니다.</div></div><button id="clearHistory" class="history-clear">전체 삭제</button></div><div id="historyGrid" class="history-grid"></div></section>
 </div>
 <div id="orderModal" class="order-modal" role="dialog" aria-modal="true">
   <div class="order-card">
+    <button id="modalClose" class="modal-close" type="button" aria-label="닫기">×</button>
     <div class="success">✓</div>
     <h3>견적 구성이 저장되었습니다</h3>
     <p>아래 견적번호를 스마트스토어의 구매자 요청사항에 입력하세요.</p>
@@ -68,10 +72,12 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
       <div><span>주문 수량</span><b id="modalQty">500</b></div>
       <div><span>결제 예정금액</span><b id="modalPrice">15,000원</b></div>
     </div>
-    <div id="countdown" class="countdown">3초 후 스마트스토어로 이동합니다.</div>
+    <div class="modal-guide">① 주문 수량을 복사해 상품 수량에 입력<br>② 견적번호를 복사해 구매자 요청사항에 입력</div>
     <div class="modal-actions">
-      <button id="modalCopy" class="modal-copy">견적번호 다시 복사</button>
-      <a id="modalGo" class="modal-go" href="https://smartstore.naver.com/shoplixmarket/products/13673503004">지금 이동</a>
+      <button id="modalCopy" class="modal-copy">견적번호 복사</button>
+      <button id="modalQtyCopy" class="modal-copy">주문수량 복사</button>
+      <button id="modalImageSave" class="modal-save">견적 이미지 저장</button>
+      <a id="modalGo" class="modal-go" href="https://smartstore.naver.com/shoplixmarket/products/13673503004" target="_blank" rel="noopener noreferrer">스마트스토어 새 탭으로 열기</a>
     </div>
     <div id="serverNote" class="server-note"></div>
   </div>
@@ -96,8 +102,10 @@ function init(){
  LOGOS.forEach(l=>{const b=document.createElement('button');b.className='logo';b.dataset.id=l.id;b.innerHTML=`<div class="check">✓</div><img src="${l.src}" alt="${l.name}"><div class="nm">${l.name}</div>`;b.onclick=()=>toggle(l);$('grid').appendChild(b)});
  $('width').onchange=render;$('gap').onchange=render;
  $('reset').onclick=()=>{selected=[];$('width').value='220';$('gap').value='15';render()};
- $('copy').onclick=copyInfo;$('order').onclick=createQuoteAndOrder;$('modalCopy').onclick=()=>copyQuoteNumber(currentQuoteNumber);$('modalGo').href=SMARTSTORE_URL;
- render();
+ $('copy').onclick=copyInfo;$('order').onclick=createQuoteAndOrder;$('modalCopy').onclick=()=>copyQuoteNumber(currentQuoteNumber);$('modalQtyCopy').onclick=()=>copyOrderQuantity(currentOrderQuantity);$('modalImageSave').onclick=downloadCurrentQuoteImage;$('modalGo').href=SMARTSTORE_URL;$('modalGo').target='_blank';
+ $('modalClose').onclick=closeOrderModal;$('orderModal').onclick=e=>{if(e.target===$('orderModal'))closeOrderModal()};
+ $('clearHistory').onclick=clearQuoteHistory;
+ render();renderQuoteHistory();
 }
 function toggle(l){const i=selected.findIndex(x=>x.id===l.id);i>=0?selected.splice(i,1):selected.push({...l});render()}
 function calc(){
@@ -180,8 +188,83 @@ async function saveQuote(payload){
  return SUPABASE_URL&&SUPABASE_ANON_KEY?'server':'local';
 }
 function formatLocalDate(iso){
- return new Intl.DateTimeFormat('ko-KR',{dateStyle:'full',timeStyle:'medium',timeZone:'Asia/Seoul'}).format(new Date(iso));
+ return new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false,timeZone:'Asia/Seoul'}).format(new Date(iso)).replace(/\. /g,'-').replace('일','').replace(/\.$/,'');
 }
+
+function loadImage(src){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src})}
+function roundedRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
+async function createQuotePreviewImage(payload){
+ const W=1000,pad=54,contentW=W-pad*2;
+ const previewW=600;
+ const scaled=payload.logos.map(x=>{const original=selected.find(s=>s.id===x.id);return {...x,src:original?.src||'',height:previewW/x.ratio}});
+ const gapPx=payload.gap_mm*1.25;
+ const previewInnerH=scaled.reduce((a,x)=>a+x.height,0)+Math.max(0,scaled.length-1)*gapPx;
+ const previewBoxH=Math.max(260,previewInnerH+72);
+ const listLineH=33;
+ const listH=Math.max(90,payload.logos.length*listLineH+44);
+ const infoH=390;
+ const H=Math.ceil(190+previewBoxH+36+listH+30+infoH+90);
+ const c=document.createElement('canvas');c.width=W;c.height=H;const ctx=c.getContext('2d');
+ const grad=ctx.createLinearGradient(0,0,0,H);grad.addColorStop(0,'#090b0e');grad.addColorStop(.58,'#141920');grad.addColorStop(1,'#090b0e');ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);
+ ctx.fillStyle='#ff5a1f';ctx.fillRect(0,0,10,H);
+ ctx.fillStyle='#f4f6f8';ctx.font='900 36px Arial,"Noto Sans KR",sans-serif';ctx.fillText('RIGFORGE GARAGE',pad,68);
+ ctx.fillStyle='#ff865a';ctx.font='800 16px Arial,"Noto Sans KR",sans-serif';ctx.fillText('SEAT DECAL QUOTATION',pad,100);
+ ctx.textAlign='right';ctx.fillStyle='#fff';ctx.font='900 27px Arial,"Noto Sans KR",sans-serif';ctx.fillText(payload.quote_no,W-pad,65);
+ ctx.fillStyle='#9aa4ae';ctx.font='14px Arial,"Noto Sans KR",sans-serif';ctx.fillText('견적일시  '+formatLocalDate(payload.created_at),W-pad,98);ctx.textAlign='left';
+
+ let y=138;
+ ctx.fillStyle='#0d1116';roundedRect(ctx,pad,y,contentW,previewBoxH,18);
+ ctx.strokeStyle='#2a3038';ctx.lineWidth=2;ctx.strokeRect(pad,y,contentW,previewBoxH);
+ ctx.fillStyle='#87919c';ctx.font='800 14px Arial,"Noto Sans KR",sans-serif';ctx.fillText('DESIGN PREVIEW',pad+24,y+31);
+ const sheetW=previewW+72,sheetX=pad+(contentW-sheetW)/2,sheetY=y+50;
+ ctx.fillStyle='#272c32';roundedRect(ctx,sheetX,sheetY,sheetW,previewInnerH+32,7);
+ let py=sheetY+16;
+ for(let i=0;i<scaled.length;i++){
+   const x=scaled[i];
+   try{const im=await loadImage(x.src);ctx.drawImage(im,sheetX+36,py,previewW,x.height);py+=x.height+(i<scaled.length-1?gapPx:0)}catch(e){}
+ }
+ y+=previewBoxH+26;
+
+ ctx.fillStyle='#0d1116';roundedRect(ctx,pad,y,contentW,listH,16);
+ ctx.fillStyle='#f4f6f8';ctx.font='900 18px Arial,"Noto Sans KR",sans-serif';ctx.fillText('디자인 구성',pad+24,y+34);
+ ctx.font='14px Arial,"Noto Sans KR",sans-serif';
+ payload.logos.forEach((x,i)=>{
+   const original=selected.find(s=>s.id===x.id);
+   const itemH=original?Math.round(payload.logo_width_mm/original.ratio):'-';
+   const lineY=y+70+i*listLineH;
+   ctx.fillStyle='#ff8a60';ctx.font='800 13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(String(i+1).padStart(2,'0'),pad+25,lineY);
+   ctx.fillStyle='#ffffff';ctx.font='700 14px Arial,"Noto Sans KR",sans-serif';ctx.fillText(x.name,pad+67,lineY);
+   ctx.textAlign='right';ctx.fillStyle='#8f99a4';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(`폭 ${payload.logo_width_mm} mm / 높이 ${itemH} mm`,W-pad-24,lineY);ctx.textAlign='left';
+ });
+ y+=listH+22;
+
+ ctx.fillStyle='#0d1116';roundedRect(ctx,pad,y,contentW,infoH,16);
+ ctx.fillStyle='#f4f6f8';ctx.font='900 18px Arial,"Noto Sans KR",sans-serif';ctx.fillText('구성 설정 및 주문 정보',pad+24,y+35);
+ const leftX=pad+24,rightX=pad+contentW/2+10,colW=contentW/2-44;
+ const leftRows=[['로고 폭',payload.logo_width_mm+' mm'],['디자인 간격',payload.gap_mm+' mm'],['전체 디자인 높이',payload.total_height_mm+' mm'],['실제 제작 폭',payload.actual_sheet_width_mm+' mm'],['좌우 제작 여유','각 20 mm']];
+ const rightRows=[['가격 계산 면적',payload.calculated_area_cm2.toLocaleString('ko-KR')+' cm²'],['스마트스토어 주문 수량',payload.order_quantity.toLocaleString('ko-KR')],['면적 단가',payload.unit_price_krw+'원/cm²'],['결제 예정금액',payload.total_price_krw.toLocaleString('ko-KR')+'원'],['최소금액 적용',payload.minimum_applied?'예':'아니오']];
+ function drawRows(rows,x){let ry=y+62;rows.forEach(([k,v])=>{ctx.strokeStyle='#292f36';ctx.beginPath();ctx.moveTo(x,ry);ctx.lineTo(x+colW,ry);ctx.stroke();ctx.fillStyle='#8e98a3';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(k,x,ry+28);ctx.textAlign='right';ctx.fillStyle='#fff';ctx.font='700 14px Arial,"Noto Sans KR",sans-serif';ctx.fillText(v,x+colW,ry+28);ctx.textAlign='left';ry+=50})}
+ drawRows(leftRows,leftX);drawRows(rightRows,rightX);
+ ctx.fillStyle='#171c22';roundedRect(ctx,pad+24,y+320,contentW-48,54,10);
+ ctx.fillStyle='#ff9a75';ctx.font='800 13px Arial,"Noto Sans KR",sans-serif';ctx.fillText('제작 사양',pad+40,y+343);
+ ctx.fillStyle='#c5ccd3';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText('국내산 백색 커팅 시트 · 플로터 재단 · 위딩 · 전사필름 포함 · 인쇄/코팅 아님',pad+125,y+343);
+ ctx.fillStyle='#7f8994';ctx.font='12px Arial,"Noto Sans KR",sans-serif';ctx.fillText('스마트스토어 구매자 요청사항에는 위 견적번호를 입력해 주세요.',pad,H-42);
+ return new Promise(resolve=>c.toBlob(blob=>resolve({blob,dataUrl:c.toDataURL('image/jpeg',.9)}),'image/jpeg',.9));
+}
+function getSavedQuotes(){try{return JSON.parse(localStorage.getItem('rigforge_quotes')||'[]')}catch(e){return[]}}
+function renderQuoteHistory(){
+ const grid=$('historyGrid');if(!grid)return;const quotes=getSavedQuotes().slice().reverse();grid.innerHTML='';
+ if(!quotes.length){grid.innerHTML='<div class="history-empty">아직 저장된 견적이 없습니다.<br>견적을 생성하면 미리보기 이미지와 함께 표시됩니다.</div>';return}
+ quotes.forEach(q=>{const card=document.createElement('article');card.className='history-card';
+ const logos=(q.logos||[]).map(x=>x.name).join(' → ');
+ card.innerHTML=`${q.preview_image?`<img class="history-preview" src="${q.preview_image}" alt="${q.quote_no} 미리보기">`:'<div class="history-preview" style="display:grid;place-items:center;color:#68727d;font-size:12px">미리보기 이미지 없음</div>'}<div class="history-body"><div class="history-no">${q.quote_no}</div><div class="history-date">${formatLocalDate(q.created_at)}</div><div class="history-info"><div><span>주문 수량</span><b>${Number(q.order_quantity).toLocaleString('ko-KR')}</b></div><div><span>결제금액</span><b>${Number(q.total_price_krw).toLocaleString('ko-KR')}원</b></div><div><span>로고 폭</span><b>${q.logo_width_mm} mm</b></div><div><span>총 길이</span><b>${q.total_height_mm} mm</b></div></div><div class="history-logos">${logos}</div><div class="history-actions"><button class="history-copy">견적번호 복사</button>${q.preview_image?`<a class="history-download" href="${q.preview_image}" download="${q.quote_no}.jpg">이미지 저장</a>`:'<button class="history-download" disabled>이미지 없음</button>'}<button class="history-delete">이 견적 삭제</button></div></div>`;
+ card.querySelector('.history-copy').onclick=()=>copyQuoteNumber(q.quote_no);card.querySelector('.history-delete').onclick=()=>deleteQuote(q.quote_no);grid.appendChild(card)})
+}
+function deleteQuote(no){const next=getSavedQuotes().filter(q=>q.quote_no!==no);localStorage.setItem('rigforge_quotes',JSON.stringify(next));renderQuoteHistory();toast('견적 내역을 삭제했습니다.')}
+function clearQuoteHistory(){if(!getSavedQuotes().length)return;if(confirm('이 브라우저에 저장된 견적 내역을 모두 삭제할까요?')){localStorage.removeItem('rigforge_quotes');renderQuoteHistory();toast('견적 내역을 모두 삭제했습니다.')}}
+let currentOrderQuantity=0,currentPreviewDataUrl='';
+function closeOrderModal(){$('orderModal').classList.remove('show')}
+
 async function sendQuoteEmail(payload){
  const logoText=payload.logos.map(x=>`${x.order}. ${x.name}`).join(' / ');
  const formData={
@@ -203,11 +286,9 @@ async function sendQuoteEmail(payload){
    빌더버전:payload.builder_version,
    상품페이지:payload.smartstore_url
  };
- const res=await fetch(FORMSPREE_ENDPOINT,{
-   method:'POST',
-   headers:{'Content-Type':'application/json','Accept':'application/json'},
-   body:JSON.stringify(formData)
- });
+ const fd=new FormData();Object.entries(formData).forEach(([k,v])=>fd.append(k,String(v)));
+ if(payload.preview_blob)fd.append('견적미리보기',payload.preview_blob,`${payload.quote_no}.jpg`);
+ const res=await fetch(FORMSPREE_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:fd});
  if(!res.ok){
    let detail='';
    try{const data=await res.json();detail=data?.errors?.map(x=>x.message).join(', ')||data?.error||''}catch(e){}
@@ -219,20 +300,25 @@ async function copyQuoteNumber(no){
  try{await navigator.clipboard.writeText(no)}catch(e){const t=document.createElement('textarea');t.value=no;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
  toast('견적번호를 복사했습니다.');
 }
+async function copyOrderQuantity(qty){
+ const value=String(qty);try{await navigator.clipboard.writeText(value)}catch(e){const t=document.createElement('textarea');t.value=value;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+ toast('주문수량을 복사했습니다.');
+}
+function downloadCurrentQuoteImage(){if(!currentPreviewDataUrl)return;const a=document.createElement('a');a.href=currentPreviewDataUrl;a.download=`${currentQuoteNumber}.jpg`;a.click();}
 async function createQuoteAndOrder(){
  const d=calc();if(!selected.length||d.over)return;
  const btn=$('order');btn.disabled=true;btn.textContent='견적 저장 중...';
  const quoteNo=makeQuoteNumber(),payload=quotePayload(quoteNo);
  try{
-   const mode=await saveQuote(payload);
+   btn.textContent='미리보기 이미지 생성 중...';
+   const preview=await createQuotePreviewImage(payload);payload.preview_image=preview.dataUrl;payload.preview_blob=preview.blob;
+   const mode=await saveQuote({...payload,preview_blob:undefined});
+   renderQuoteHistory();
    btn.textContent='견적 이메일 전송 중...';
-   await sendQuoteEmail(payload);currentQuoteNumber=quoteNo;
-   await copyQuoteNumber(quoteNo);
+   await sendQuoteEmail(payload);currentQuoteNumber=quoteNo;currentOrderQuantity=d.orderQty;currentPreviewDataUrl=preview.dataUrl;
    $('quoteNumber').textContent=quoteNo;$('modalQty').textContent=d.orderQty.toLocaleString('ko-KR');$('modalPrice').textContent=d.price.toLocaleString('ko-KR')+'원';
    $('serverNote').textContent=mode==='server'?'견적정보가 서버에 저장되고 shoplix@naver.com으로 전송되었습니다.':'견적정보가 shoplix@naver.com으로 전송되었으며, 이 브라우저에도 백업 저장되었습니다.';
    $('orderModal').classList.add('show');
-   let sec=3;$('countdown').textContent=`${sec}초 후 스마트스토어로 이동합니다.`;
-   const timer=setInterval(()=>{sec--;if(sec<=0){clearInterval(timer);location.href=SMARTSTORE_URL}else $('countdown').textContent=`${sec}초 후 스마트스토어로 이동합니다.`},1000);
  }catch(err){alert('견적 저장 중 오류가 발생했습니다.\\n'+err.message)}finally{btn.textContent='견적 저장 후 주문하기';btn.disabled=false;render()}
 }
 function toast(m){$('toast').textContent=m;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1700)}
