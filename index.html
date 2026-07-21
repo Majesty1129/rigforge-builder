@@ -37,6 +37,10 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 @media(max-width:700px){.logo-grid{grid-template-columns:repeat(2,1fr)}.preview-grid{grid-template-columns:1fr}.stage{min-height:360px;padding:15px}.seat-sim-wrap{padding:8px}.quote{position:static}.item{grid-template-columns:28px 58px 1fr 70px}.thumb{width:58px}.del{grid-column:auto}.hero h1{font-size:33px}.history-grid{grid-template-columns:1fr}}
 
 .logo-tools{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:0 0 14px}.logo-search{flex:1 1 220px;height:40px;border:1px solid var(--line);border-radius:10px;background:#0e1217;color:#eef2f5;padding:0 13px;outline:none}.logo-search:focus{border-color:var(--orange)}.logo-filter{height:40px;border:1px solid var(--line);border-radius:10px;background:#0e1217;color:#d8dee4;padding:0 10px}.fav-only{height:40px;border:1px solid var(--line);border-radius:10px;background:#171c22;color:#d8dee4;padding:0 12px;font-weight:800;cursor:pointer}.fav-only.active{border-color:#f6c453;color:#f6c453;background:#211d12}.logo-fav{position:absolute;left:6px;top:5px;border:0;background:rgba(5,7,9,.72);color:#8f99a4;width:23px;height:23px;border-radius:50%;font-size:15px;line-height:1;cursor:pointer;z-index:2}.logo-fav.on{color:#ffd45b}.logo-empty{grid-column:1/-1;padding:28px;text-align:center;border:1px dashed #39414a;border-radius:11px;color:#7e8994;background:#0e1217;font-size:12px}.logo-count-note{font-size:10px;color:#7f8994}.manage-link{color:#ff9b78;text-decoration:none;font-size:10px;font-weight:800}.manage-link:hover{text-decoration:underline}
+
+/* 관리자 모드: Ctrl+Shift+A */
+.admin-modal{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.82);backdrop-filter:blur(6px)}.admin-modal.show{display:flex}.admin-card{width:760px;max-width:100%;max-height:90vh;overflow:auto;border:1px solid #3a424c;border-radius:18px;background:#12161b;box-shadow:0 25px 90px rgba(0,0,0,.7);padding:22px}.admin-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:14px}.admin-head h3{margin:0 0 5px;font-size:20px}.admin-head p{margin:0;color:#8f99a4;font-size:12px;line-height:1.55}.admin-close{width:36px;height:36px;border:1px solid #343c45;border-radius:9px;background:#1a2026;color:#dbe1e6;font-size:21px;cursor:pointer}.admin-drop{display:block;border:1px dashed #56616d;border-radius:13px;background:#0c1015;padding:22px;text-align:center;color:#b8c1ca;cursor:pointer}.admin-drop:hover,.admin-drop.drag{border-color:var(--orange);background:#17120f}.admin-drop b{display:block;color:#fff;font-size:14px;margin-bottom:5px}.admin-drop small{color:#7f8994}.admin-list{display:flex;flex-direction:column;gap:8px;margin-top:13px}.admin-empty{padding:18px;text-align:center;color:#707b86;font-size:12px}.admin-row{display:grid;grid-template-columns:82px minmax(120px,1fr) 120px minmax(130px,1fr) 34px;gap:8px;align-items:center;padding:8px;border:1px solid var(--line);border-radius:11px;background:#0d1116}.admin-row img{width:82px;height:42px;object-fit:contain}.admin-row input{width:100%;height:36px;border:1px solid #313841;border-radius:8px;background:#151a20;color:#fff;padding:0 9px;font-size:11px}.admin-remove{width:34px;height:34px;border:1px solid #57343a;border-radius:8px;background:#241519;color:#ff9da6;cursor:pointer}.admin-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.admin-actions button{height:43px;border-radius:9px;font-weight:850;cursor:pointer}.admin-generate{border:0;background:var(--orange);color:#fff}.admin-clear{border:1px solid #39424b;background:#1a2027;color:#dce2e7}.admin-guide{margin-top:13px;padding:11px 13px;border:1px solid #2b4050;border-radius:10px;background:#101820;color:#aebdca;font-size:11px;line-height:1.65}.admin-guide b{color:#fff}.admin-status{margin-top:10px;color:#85dcb2;font-size:11px;font-weight:800}.admin-secret{font-size:10px;color:#68727d}
+@media(max-width:650px){.admin-row{grid-template-columns:70px 1fr 34px}.admin-row img{width:70px}.admin-row .admin-category,.admin-row .admin-tags{grid-column:2/4}.admin-actions{grid-template-columns:1fr}}
 </style>
 </head>
 <body><div class="wrap">
@@ -52,7 +56,7 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 </div>
 </section>
 
-<section class="section"><div class="head"><div class="title"><div class="n">2</div><div><h2>디자인 선택</h2><div class="sub">검색하거나 즐겨찾기에서 원하는 디자인을 선택하세요.</div></div></div><div class="count"><b id="cnt">0</b>개 선택</div></div><div class="logo-tools"><input id="logoSearch" class="logo-search" type="search" placeholder="디자인 검색..." autocomplete="off"><select id="categoryFilter" class="logo-filter"><option value="">전체 카테고리</option></select><button id="favoriteOnly" class="fav-only" type="button">★ 즐겨찾기</button><span id="logoCountNote" class="logo-count-note"></span><a class="manage-link" href="logo_manager.html" target="_blank" rel="noopener">디자인 추가 도우미</a></div><div id="grid" class="logo-grid"></div></section>
+<section class="section"><div class="head"><div class="title"><div class="n">2</div><div><h2>디자인 선택</h2><div class="sub">검색하거나 즐겨찾기에서 원하는 디자인을 선택하세요.</div></div></div><div class="count"><b id="cnt">0</b>개 선택</div></div><div class="logo-tools"><input id="logoSearch" class="logo-search" type="search" placeholder="디자인 검색..." autocomplete="off"><select id="categoryFilter" class="logo-filter"><option value="">전체 카테고리</option></select><button id="favoriteOnly" class="fav-only" type="button">★ 즐겨찾기</button><span id="logoCountNote" class="logo-count-note"></span><span class="admin-secret" title="Ctrl + Shift + A">관리자 모드: Ctrl+Shift+A</span></div><div id="grid" class="logo-grid"></div></section>
 
 <section class="section"><div class="head"><div class="title"><div class="n">3</div><div><h2>순서 및 개별 크기</h2><div class="sub">모든 디자인은 선택한 로고 폭으로 동일하게 제작되며, 항목을 드래그해 순서만 변경할 수 있습니다.</div></div></div></div><div id="list" class="list"></div></section>
 
@@ -83,6 +87,18 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
     <div id="serverNote" class="server-note"></div>
   </div>
 </div>
+
+<div id="adminModal" class="admin-modal" role="dialog" aria-modal="true" aria-label="디자인 관리자">
+  <div class="admin-card">
+    <div class="admin-head"><div><h3>디자인 관리자</h3><p>새 PNG를 여러 장 선택하면 이름과 비율을 자동으로 준비합니다.<br>완료 후 생성된 logos.json과 PNG 파일을 GitHub에 업로드하세요.</p></div><button id="adminClose" class="admin-close" type="button" aria-label="닫기">×</button></div>
+    <label id="adminDrop" class="admin-drop" for="adminFiles"><b>PNG 파일을 여기에 끌어놓거나 클릭하세요</b><small>여러 파일을 한 번에 선택할 수 있습니다.</small></label>
+    <input id="adminFiles" type="file" accept="image/png" multiple hidden>
+    <div id="adminList" class="admin-list"><div class="admin-empty">추가할 PNG가 없습니다.</div></div>
+    <div class="admin-actions"><button id="adminClear" class="admin-clear" type="button">선택 초기화</button><button id="adminGenerate" class="admin-generate" type="button">통합 logos.json 다운로드</button></div>
+    <div class="admin-guide"><b>GitHub 반영 순서</b><br>① 선택한 PNG 파일을 저장소의 <code>logos</code> 폴더에 업로드<br>② 여기서 받은 <code>logos.json</code>으로 기존 파일을 교체<br>③ GitHub Pages가 갱신되면 Builder에 자동 표시<br><br>이 도구는 보안상 GitHub 파일을 직접 수정하지 않으며, 기존 디자인 목록과 새 디자인을 합친 JSON을 생성합니다.</div>
+    <div id="adminStatus" class="admin-status"></div>
+  </div>
+</div>
 <div id="toast" class="toast">복사했습니다.</div>
 <script>
 /* ===== 주문 저장 설정 =====
@@ -97,6 +113,44 @@ const SUPABASE_ANON_KEY="";
 const SUPABASE_TABLE="rigforge_quotes";
 
 let LOGOS=[];
+let adminPending=[];
+function setupAdminMode(){
+ const modal=$('adminModal'),files=$('adminFiles'),drop=$('adminDrop');
+ const open=()=>{modal.classList.add('show');renderAdminList()};
+ const close=()=>modal.classList.remove('show');
+ window.addEventListener('keydown',e=>{if(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()==='a'){e.preventDefault();open()}if(e.key==='Escape'&&modal.classList.contains('show'))close()});
+ $('adminClose').onclick=close;modal.onclick=e=>{if(e.target===modal)close()};
+ files.onchange=()=>addAdminFiles([...files.files]);
+ ['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('drag')}));
+ ['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('drag')}));
+ drop.addEventListener('drop',e=>addAdminFiles([...e.dataTransfer.files]));
+ $('adminClear').onclick=()=>{adminPending.forEach(x=>URL.revokeObjectURL(x.preview));adminPending=[];files.value='';renderAdminList();$('adminStatus').textContent=''};
+ $('adminGenerate').onclick=downloadMergedLogoJson;
+}
+function cleanLogoName(filename){return filename.replace(/\.png$/i,'').replace(/^\d+[ _.-]*/,'').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim()}
+function makeLogoId(name,file){return (name||file).toLocaleLowerCase().normalize('NFKD').replace(/[^a-z0-9가-힣]+/g,'-').replace(/^-+|-+$/g,'')||('logo-'+Date.now())}
+function addAdminFiles(files){
+ const pngs=files.filter(f=>f.type==='image/png'||/\.png$/i.test(f.name));
+ const known=new Set([...LOGOS.map(x=>x.file.toLocaleLowerCase()),...adminPending.map(x=>x.file.name.toLocaleLowerCase())]);
+ pngs.forEach(file=>{if(known.has(file.name.toLocaleLowerCase()))return;known.add(file.name.toLocaleLowerCase());adminPending.push({file,name:cleanLogoName(file.name),category:'',tags:'',preview:URL.createObjectURL(file),ratio:1})});
+ adminPending.forEach(x=>{const img=new Image();img.onload=()=>x.ratio=img.naturalWidth/img.naturalHeight;img.src=x.preview});
+ renderAdminList();$('adminStatus').textContent=pngs.length?'PNG를 불러왔습니다. 이름을 확인한 뒤 JSON을 다운로드하세요.':'PNG 파일만 추가할 수 있습니다.';
+}
+function renderAdminList(){
+ const box=$('adminList');if(!box)return;box.innerHTML='';
+ if(!adminPending.length){box.innerHTML='<div class="admin-empty">추가할 PNG가 없습니다.</div>';return}
+ adminPending.forEach((x,i)=>{const row=document.createElement('div');row.className='admin-row';row.innerHTML=`<img src="${x.preview}" alt=""><input class="admin-name" value="${escapeHtml(x.name)}" aria-label="디자인 이름"><input class="admin-category" value="${escapeHtml(x.category)}" placeholder="카테고리"><input class="admin-tags" value="${escapeHtml(x.tags)}" placeholder="태그 (쉼표 구분)"><button class="admin-remove" type="button">×</button>`;row.querySelector('.admin-name').oninput=e=>x.name=e.target.value;row.querySelector('.admin-category').oninput=e=>x.category=e.target.value;row.querySelector('.admin-tags').oninput=e=>x.tags=e.target.value;row.querySelector('.admin-remove').onclick=()=>{URL.revokeObjectURL(x.preview);adminPending.splice(i,1);renderAdminList()};box.appendChild(row)})
+}
+function escapeHtml(v){return String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function downloadMergedLogoJson(){
+ if(!adminPending.length){$('adminStatus').textContent='먼저 새 PNG 파일을 선택하세요.';return}
+ const existing=LOGOS.map(({id,name,file,category,tags})=>({id,name,file,...(category?{category}:{}),...(tags&&tags.length?{tags}:{} )}));
+ const usedIds=new Set(existing.map(x=>x.id));
+ const added=adminPending.map(x=>{let id=makeLogoId(x.name,x.file.name),base=id,n=2;while(usedIds.has(id))id=base+'-'+n++;usedIds.add(id);const tags=x.tags.split(',').map(t=>t.trim()).filter(Boolean);return{id,name:x.name.trim()||cleanLogoName(x.file.name),file:x.file.name,...(x.category.trim()?{category:x.category.trim()}:{}),...(tags.length?{tags}:{} )}});
+ const merged=[...existing,...added].sort((a,b)=>a.name.localeCompare(b.name,'ko',{numeric:true,sensitivity:'base'}));
+ const blob=new Blob([JSON.stringify(merged,null,2)+'\n'],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='logos.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('adminStatus').textContent=`기존 ${existing.length}개 + 신규 ${added.length}개가 포함된 logos.json을 다운로드했습니다.`;
+}
+
 let selected=[];
 let favoriteLogoIds=new Set(JSON.parse(localStorage.getItem('rigforge_favorite_logos')||'[]'));
 let favoriteOnly=false;
@@ -112,7 +166,7 @@ async function init(){
    $('grid').innerHTML='<div class="logo-empty">디자인 목록을 불러오지 못했습니다.<br>GitHub Pages 또는 웹서버에서 실행해 주세요.</div>';
    console.error(err);
  }
- setupLogoTools();renderLogoGrid();
+ setupLogoTools();setupAdminMode();renderLogoGrid();
  $('width').onchange=render;$('gap').onchange=render;
  $('reset').onclick=()=>{selected=[];$('width').value='220';$('gap').value='15';render()};
  $('copy').onclick=copyInfo;$('order').onclick=createQuoteAndOrder;$('modalCopy').onclick=()=>copyQuoteNumber(currentQuoteNumber);$('modalQtyCopy').onclick=()=>copyOrderQuantity(currentOrderQuantity);$('modalGo').onclick=goToSmartStore;

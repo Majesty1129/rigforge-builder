@@ -1,24 +1,16 @@
-RIGFORGE Seat Decal Builder v9
+RIGFORGE Seat Decal Builder v10 디자인 추가 방법
 
-[새 디자인을 추가하는 가장 쉬운 방법]
-1. logo_manager.html을 엽니다.
-2. 현재 logos.json과 새 PNG 파일을 선택합니다.
-3. 생성된 logos.json을 다운로드합니다.
-4. 새 PNG 파일을 logos 폴더에 복사합니다.
-5. 기존 logos.json을 새 파일로 교체합니다.
-6. 변경된 logos 폴더와 logos.json을 GitHub에 업로드합니다.
+1. GitHub Pages에서 index.html을 연 상태로 Ctrl + Shift + A를 누릅니다.
+2. 관리자 창에 새 PNG 파일을 여러 장 끌어놓거나 선택합니다.
+3. 자동 입력된 디자인 이름을 확인하고, 필요하면 카테고리와 태그를 입력합니다.
+4. '통합 logos.json 다운로드'를 누릅니다.
+5. GitHub 저장소의 logos 폴더에 새 PNG 파일들을 업로드합니다.
+6. 다운로드한 logos.json으로 저장소의 기존 logos.json을 교체합니다.
+7. GitHub Pages 반영 후 Builder를 새로고침합니다.
 
-[직접 추가하는 방법]
-logos 폴더에 PNG를 넣은 뒤 logos.json에 아래 형식의 항목을 추가합니다.
-{
-  "id": "omp",
-  "name": "OMP",
-  "file": "OMP.png",
-  "ratio": 3.5,
-  "category": "Racing",
-  "tags": ["Racing"]
-}
-
-ratio는 PNG 가로 픽셀 ÷ 세로 픽셀입니다. logo_manager.html을 사용하면 자동 계산됩니다.
-
-주의: index.html을 파일 탐색기에서 직접 열면 브라우저 보안 정책으로 logos.json 로딩이 차단될 수 있습니다. GitHub Pages 등 웹서버에서 실행하세요.
+주의
+- PNG는 투명 배경을 권장합니다.
+- 파일명은 서로 중복되지 않아야 합니다.
+- 관리자 도구는 GitHub를 직접 수정하지 않습니다.
+- 새 PNG와 생성된 logos.json을 둘 다 업로드해야 합니다.
+- ratio 값은 브라우저가 이미지 원본 크기에서 자동 계산합니다.
