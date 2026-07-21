@@ -1,0 +1,302 @@
+[
+  {
+    "id": "24h-le-mans",
+    "name": "24h Le Mans",
+    "file": "24h Le Mans.png",
+    "ratio": 1.539409,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "assetto-corsa",
+    "name": "Assetto Corsa",
+    "file": "Assetto Corsa.png",
+    "ratio": 3.172589,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "brembo",
+    "name": "Brembo",
+    "file": "Brembo.png",
+    "ratio": 4.562044,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "castrol",
+    "name": "Castrol",
+    "file": "Castrol.png",
+    "ratio": 4.166667,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "conspit",
+    "name": "Conspit",
+    "file": "Conspit.png",
+    "ratio": 5.733945,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "dunlop",
+    "name": "Dunlop",
+    "file": "Dunlop.png",
+    "ratio": 9.615385,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "eibach",
+    "name": "Eibach",
+    "file": "Eibach.png",
+    "ratio": 3.76506,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "endless",
+    "name": "Endless",
+    "file": "Endless.png",
+    "ratio": 3.378378,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "enkei",
+    "name": "Enkei",
+    "file": "Enkei.png",
+    "ratio": 4.032258,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "f1",
+    "name": "F1",
+    "file": "F1.png",
+    "ratio": 3.980892,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "fanatec",
+    "name": "Fanatec",
+    "file": "Fanatec.png",
+    "ratio": 10.59322,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "forza-horizon",
+    "name": "Forza Horizon",
+    "file": "Forza Horizon.png",
+    "ratio": 4.807692,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "goodyear",
+    "name": "Goodyear",
+    "file": "Goodyear.png",
+    "ratio": 5.387931,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "gran-turismo",
+    "name": "Gran Turismo",
+    "file": "Gran Turismo.png",
+    "ratio": 1.531863,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "hankook",
+    "name": "Hankook",
+    "file": "Hankook.png",
+    "ratio": 8.116883,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "iracing",
+    "name": "iRacing",
+    "file": "iRacing.png",
+    "ratio": 1.031353,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "kenwood",
+    "name": "Kenwood",
+    "file": "Kenwood.png",
+    "ratio": 6.127451,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "le-mans-ultimate",
+    "name": "Le Mans Ultimate",
+    "file": "Le Mans Ultimate.png",
+    "ratio": 4.370629,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "logitech-g",
+    "name": "Logitech G",
+    "file": "Logitech G.png",
+    "ratio": 3.881988,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "michelin",
+    "name": "Michelin",
+    "file": "Michelin.png",
+    "ratio": 5.208333,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "mobil-1",
+    "name": "Mobil 1",
+    "file": "Mobil 1.png",
+    "ratio": 4.496403,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "momo",
+    "name": "MOMO",
+    "file": "MOMO.png",
+    "ratio": 5.482456,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "moza",
+    "name": "Moza",
+    "file": "Moza.png",
+    "ratio": 9.469697,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "oz-racing",
+    "name": "OZ Racing",
+    "file": "OZ Racing.png",
+    "ratio": 3.272251,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "pirelli",
+    "name": "Pirelli",
+    "file": "Pirelli.png",
+    "ratio": 4.664179,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "recaro",
+    "name": "Recaro",
+    "file": "Recaro.png",
+    "ratio": 5.530973,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "simagic",
+    "name": "Simagic",
+    "file": "Simagic.png",
+    "ratio": 7.621951,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "simucube",
+    "name": "Simucube",
+    "file": "Simucube.png",
+    "ratio": 9.191176,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "sparco",
+    "name": "Sparco",
+    "file": "Sparco.png",
+    "ratio": 4.280822,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  },
+  {
+    "id": "weathertech",
+    "name": "WeatherTech",
+    "file": "WeatherTech.png",
+    "ratio": 11.792453,
+    "category": "Other",
+    "tags": [
+      "Other"
+    ]
+  }
+]

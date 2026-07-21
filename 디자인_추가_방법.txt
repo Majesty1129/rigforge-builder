@@ -1,0 +1,24 @@
+RIGFORGE Seat Decal Builder v9
+
+[새 디자인을 추가하는 가장 쉬운 방법]
+1. logo_manager.html을 엽니다.
+2. 현재 logos.json과 새 PNG 파일을 선택합니다.
+3. 생성된 logos.json을 다운로드합니다.
+4. 새 PNG 파일을 logos 폴더에 복사합니다.
+5. 기존 logos.json을 새 파일로 교체합니다.
+6. 변경된 logos 폴더와 logos.json을 GitHub에 업로드합니다.
+
+[직접 추가하는 방법]
+logos 폴더에 PNG를 넣은 뒤 logos.json에 아래 형식의 항목을 추가합니다.
+{
+  "id": "omp",
+  "name": "OMP",
+  "file": "OMP.png",
+  "ratio": 3.5,
+  "category": "Racing",
+  "tags": ["Racing"]
+}
+
+ratio는 PNG 가로 픽셀 ÷ 세로 픽셀입니다. logo_manager.html을 사용하면 자동 계산됩니다.
+
+주의: index.html을 파일 탐색기에서 직접 열면 브라우저 보안 정책으로 logos.json 로딩이 차단될 수 있습니다. GitHub Pages 등 웹서버에서 실행하세요.
