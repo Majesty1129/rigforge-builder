@@ -1,0 +1,398 @@
+[
+  {
+    "id": "sparco",
+    "name": "Sparco",
+    "file": "Sparco.png",
+    "ratio": 4.268694608,
+    "productionHeightAt220": 51.538004,
+    "category": "Racing",
+    "tags": [
+      "Racing"
+    ]
+  },
+  {
+    "id": "brembo",
+    "name": "Brembo",
+    "file": "Brembo.png",
+    "ratio": 4.601732085,
+    "productionHeightAt220": 47.808085,
+    "category": "Brake",
+    "tags": [
+      "Brake"
+    ]
+  },
+  {
+    "id": "kenwood",
+    "name": "KENWOOD",
+    "file": "Kenwood.png",
+    "ratio": 6.137792518,
+    "productionHeightAt220": 35.843506,
+    "category": "Electronics",
+    "tags": [
+      "Electronics"
+    ]
+  },
+  {
+    "id": "eibach",
+    "name": "Eibach",
+    "file": "Eibach.png",
+    "ratio": 3.764477225,
+    "productionHeightAt220": 58.44105,
+    "category": "Suspension",
+    "tags": [
+      "Suspension"
+    ]
+  },
+  {
+    "id": "oz-racing",
+    "name": "OZ RACING",
+    "file": "OZ Racing.png",
+    "ratio": 3.272256191,
+    "productionHeightAt220": 67.2319,
+    "category": "Wheel",
+    "tags": [
+      "Wheel"
+    ]
+  },
+  {
+    "id": "enkei",
+    "name": "ENKEI",
+    "file": "Enkei.png",
+    "ratio": 3.928403375,
+    "productionHeightAt220": 56.002396,
+    "category": "Wheel",
+    "tags": [
+      "Wheel"
+    ]
+  },
+  {
+    "id": "pirelli",
+    "name": "PIRELLI",
+    "file": "Pirelli.png",
+    "ratio": 4.705762108,
+    "productionHeightAt220": 46.751195,
+    "category": "Tire",
+    "tags": [
+      "Tire"
+    ]
+  },
+  {
+    "id": "recaro",
+    "name": "RECARO",
+    "file": "Recaro.png",
+    "ratio": 5.175632742,
+    "productionHeightAt220": 42.50688,
+    "category": "Racing",
+    "tags": [
+      "Racing"
+    ]
+  },
+  {
+    "id": "michelin",
+    "name": "MICHELIN",
+    "file": "Michelin.png",
+    "ratio": 5.245579471,
+    "productionHeightAt220": 41.940076,
+    "category": "Tire",
+    "tags": [
+      "Tire"
+    ]
+  },
+  {
+    "id": "good-year",
+    "name": "GOOD YEAR",
+    "file": "Goodyear.png",
+    "ratio": 5.407240131,
+    "productionHeightAt220": 40.68619,
+    "category": "Tire",
+    "tags": [
+      "Tire"
+    ]
+  },
+  {
+    "id": "weathertech",
+    "name": "WeatherTech",
+    "file": "WeatherTech.png",
+    "ratio": 11.97350589,
+    "productionHeightAt220": 18.3739,
+    "category": "Racing",
+    "tags": [
+      "Racing"
+    ]
+  },
+  {
+    "id": "mobil-1",
+    "name": "Mobil 1",
+    "file": "Mobil 1.png",
+    "ratio": 4.529891354,
+    "productionHeightAt220": 48.566286,
+    "category": "Oil",
+    "tags": [
+      "Oil"
+    ]
+  },
+  {
+    "id": "endless",
+    "name": "ENDLESS",
+    "file": "Endless.png",
+    "ratio": 3.246116266,
+    "productionHeightAt220": 67.773296,
+    "category": "Brake",
+    "tags": [
+      "Brake"
+    ]
+  },
+  {
+    "id": "hankook",
+    "name": "HANKOOK",
+    "file": "Hankook.png",
+    "ratio": 8.119454113,
+    "productionHeightAt220": 27.095418,
+    "category": "Tire",
+    "tags": [
+      "Tire"
+    ]
+  },
+  {
+    "id": "castrol",
+    "name": "Castrol",
+    "file": "Castrol.png",
+    "ratio": 4.190924493,
+    "productionHeightAt220": 52.494384,
+    "category": "Oil",
+    "tags": [
+      "Oil"
+    ]
+  },
+  {
+    "id": "dunlop",
+    "name": "DUNLOP",
+    "file": "Dunlop.png",
+    "ratio": 9.566231136,
+    "productionHeightAt220": 22.997563,
+    "category": "Tire",
+    "tags": [
+      "Tire"
+    ]
+  },
+  {
+    "id": "momo",
+    "name": "MOMO",
+    "file": "MOMO.png",
+    "ratio": 5.523719937,
+    "productionHeightAt220": 39.828232,
+    "category": "Racing",
+    "tags": [
+      "Racing"
+    ]
+  },
+  {
+    "id": "iracing",
+    "name": "iRacing",
+    "file": "iRacing.png",
+    "ratio": 1.031185131,
+    "productionHeightAt220": 213.346754,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "f1",
+    "name": "F1",
+    "file": "F1.png",
+    "ratio": 3.999937215,
+    "productionHeightAt220": 55.000863,
+    "category": "Motorsport",
+    "tags": [
+      "Motorsport"
+    ]
+  },
+  {
+    "id": "gran-turismo",
+    "name": "GRAN TURISMO",
+    "file": "Gran Turismo.png",
+    "ratio": 1.530025352,
+    "productionHeightAt220": 143.788467,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "le-mans-ultimate",
+    "name": "LE MANS ULTIMATE",
+    "file": "Le Mans Ultimate.png",
+    "ratio": 4.400981219,
+    "productionHeightAt220": 49.988852,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "forza-horizon",
+    "name": "FORZA HORIZON",
+    "file": "Forza Horizon.png",
+    "ratio": 4.817357999,
+    "productionHeightAt220": 45.668186,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "24-le-mans",
+    "name": "24 LE MANS",
+    "file": "24h Le Mans.png",
+    "ratio": 1.535128698,
+    "productionHeightAt220": 143.31046,
+    "category": "Motorsport",
+    "tags": [
+      "Motorsport"
+    ]
+  },
+  {
+    "id": "fanatec",
+    "name": "FANATEC",
+    "file": "Fanatec.png",
+    "ratio": 10.668932861,
+    "productionHeightAt220": 20.620619,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  },
+  {
+    "id": "logitech-g",
+    "name": "Logitech G",
+    "file": "Logitech G.png",
+    "ratio": 3.905647424,
+    "productionHeightAt220": 56.328689,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  },
+  {
+    "id": "moza",
+    "name": "MOZA",
+    "file": "Moza.png",
+    "ratio": 9.5297564,
+    "productionHeightAt220": 23.085585,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  },
+  {
+    "id": "simagic",
+    "name": "SIMAGIC",
+    "file": "Simagic.png",
+    "ratio": 7.616258194,
+    "productionHeightAt220": 28.885575,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  },
+  {
+    "id": "simucube",
+    "name": "SIMUCUBE",
+    "file": "Simucube.png",
+    "ratio": 9.305960616,
+    "productionHeightAt220": 23.640762,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  },
+  {
+    "id": "conspit",
+    "name": "CONSPIT",
+    "file": "Conspit.png",
+    "ratio": 5.742319325,
+    "productionHeightAt220": 38.312046,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  },
+  {
+    "id": "aramco",
+    "name": "aramco",
+    "file": "Aramco.png",
+    "ratio": 6.104619424,
+    "productionHeightAt220": 36.038283,
+    "category": "Motorsport",
+    "tags": [
+      "Motorsport"
+    ]
+  },
+  {
+    "id": "assetto-corsa-competizione",
+    "name": "ASSETTO CORSA COMPETIZIONE",
+    "file": "Assetto Corsa Competizione.png",
+    "ratio": 3.098855871,
+    "productionHeightAt220": 70.993944,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "assetto-corsa-rally",
+    "name": "ASSETTO CORSA RALLY",
+    "file": "Assetto Corsa Rally.png",
+    "ratio": 3.66837552,
+    "productionHeightAt220": 59.97205,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "assetto-corsa-evo",
+    "name": "ASSETTO CORSA EVO",
+    "file": "Assetto Corsa Evo.png",
+    "ratio": 2.657056451,
+    "productionHeightAt220": 82.798391,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "assetto-corsa",
+    "name": "ASSETTO CORSA",
+    "file": "Assetto Corsa.png",
+    "ratio": 3.182363523,
+    "productionHeightAt220": 69.131009,
+    "category": "Game",
+    "tags": [
+      "Game"
+    ]
+  },
+  {
+    "id": "qubic-system",
+    "name": "QUBIC SYSTEM",
+    "file": "Qubic System.png",
+    "ratio": 5.799949832,
+    "productionHeightAt220": 37.931363,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  },
+  {
+    "id": "gomez-sim-industries",
+    "name": "GOMEZ SIM INDUSTRIES",
+    "file": "Gomez Sim Industries.png",
+    "ratio": 2.612446261,
+    "productionHeightAt220": 84.212259,
+    "category": "Sim Racing",
+    "tags": [
+      "Sim Racing"
+    ]
+  }
+]
