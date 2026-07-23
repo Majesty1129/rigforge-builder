@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RIGFORGE GARAGE | Seat Decal Builder v13.7</title>
+<title>RIGFORGE GARAGE | Seat Decal Builder v13.8</title>
 <style>
 :root{--bg:#090b0e;--panel:#13171c;--panel2:#0e1217;--line:#2a3038;--text:#f4f6f8;--muted:#919ba6;--orange:#ff5a1f;--danger:#ff6572;--ok:#5bdda0}
 *{box-sizing:border-box}
@@ -16,7 +16,7 @@ header{padding:22px 30px;border-bottom:1px solid var(--line);display:flex;justif
 .hero small{font-weight:900;letter-spacing:.16em;color:#ff865a}.hero h1{font-size:40px;line-height:1.08;letter-spacing:-.04em;margin:10px 0}.hero p{color:#b2bac3;margin:0;font-size:14px}
 main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--line);border-radius:18px;padding:19px;margin-bottom:15px}
 .head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;margin-bottom:15px}.title{display:flex;gap:11px}.n{width:28px;height:28px;border-radius:9px;background:var(--orange);display:grid;place-items:center;font-weight:900;font-size:13px}h2{font-size:18px;margin:1px 0}.sub{font-size:12px;color:var(--muted)}
-.controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{font-size:12px;font-weight:800;color:#b7c0c9;display:block;margin-bottom:7px}select{width:100%;height:43px;border-radius:10px;border:1px solid var(--line);background:#0d1116;color:#fff;padding:0 11px}
+.controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}label{font-size:12px;font-weight:800;color:#b7c0c9;display:block;margin-bottom:7px}select{width:100%;height:43px;border-radius:10px;border:1px solid var(--line);background:#0d1116;color:#fff;padding:0 11px}
 
 .note{margin-top:12px;padding:11px 13px;border:1px solid var(--line);background:#0d1116;color:#929ca6;border-radius:10px;font-size:12px}
 .logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.logo{height:88px;border:1px solid var(--line);background:#0e1217;border-radius:11px;padding:9px;position:relative;transition:.15s}.logo:hover{transform:translateY(-1px);border-color:#505966}.logo.active{border-color:var(--orange);box-shadow:0 0 0 1px rgba(255,90,31,.25) inset;background:#1d1511}.logo img{width:100%;height:47px;object-fit:contain}.logo .nm{font-size:10px;color:#cbd1d7;text-align:center;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.check{position:absolute;right:6px;top:6px;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:var(--orange);font-size:11px;opacity:0}.logo.active .check{opacity:1}
@@ -34,7 +34,7 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 .order-modal{position:fixed;inset:0;z-index:999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.76);backdrop-filter:blur(5px)}.order-modal.show{display:flex}.order-card{position:relative;width:430px;max-width:100%;border:1px solid #3a424c;border-radius:18px;background:#12161b;box-shadow:0 25px 80px rgba(0,0,0,.6);padding:25px;text-align:center}.modal-close{position:absolute;right:13px;top:13px;width:34px;height:34px;border:1px solid #343c45;border-radius:9px;background:#1a2026;color:#dbe1e6;font-size:20px;line-height:1;cursor:pointer}.modal-close:hover{background:#252c34;color:#fff}.order-card .success{width:54px;height:54px;margin:0 auto 13px;border-radius:50%;display:grid;place-items:center;background:#113224;border:1px solid #286744;color:#72e2a8;font-size:26px;font-weight:900}.order-card h3{margin:0 0 8px;font-size:21px}.order-card p{margin:0;color:#9ea8b2;font-size:13px;line-height:1.65}.quote-number{margin:17px 0 9px;padding:14px;border-radius:11px;background:#0a0d11;border:1px solid #343b44;color:#fff;font-size:24px;font-weight:950;letter-spacing:.08em}.order-summary-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.order-summary-mini div{padding:10px;border-radius:9px;background:#191e24;border:1px solid #2c333b}.order-summary-mini span{display:block;color:#85909b;font-size:10px;margin-bottom:4px}.order-summary-mini b{font-size:15px}.modal-guide{margin-top:15px;color:#ffb092;font-weight:800;font-size:11px;line-height:1.6}.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}.modal-actions button,.modal-actions a{height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;font-weight:850;cursor:pointer}.modal-copy{border:1px solid #3b444e;background:#1a2027;color:#e3e8ed}.modal-qty{border:1px solid #3b444e;background:#1a2027;color:#e3e8ed}.modal-go{grid-column:1/-1;border:0;background:var(--orange);color:#fff}.server-note{margin-top:12px;color:#76818c;font-size:10px;line-height:1.5}
 
 .quote-history{margin:0 20px 28px;padding:19px;border:1px solid var(--line);border-radius:18px;background:rgba(19,23,28,.97)}.history-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.history-head h2{margin:0}.history-clear{border:1px solid #4a3438;background:#211619;color:#ff9ca5;border-radius:8px;padding:8px 10px;font-size:11px;cursor:pointer}.history-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.history-empty{grid-column:1/-1;padding:26px;text-align:center;border:1px dashed #38404a;border-radius:11px;color:#7d8792;background:#0e1217;font-size:12px}.history-card{overflow:hidden;border:1px solid var(--line);border-radius:13px;background:#0d1116}.history-preview{width:100%;height:220px;display:block;object-fit:contain;background:#090c10;border-bottom:1px solid var(--line)}.history-body{padding:13px}.history-no{font-weight:950;letter-spacing:.05em;font-size:15px}.history-date{margin-top:4px;color:#7f8994;font-size:10px}.history-info{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:11px}.history-info div{padding:8px;border-radius:8px;background:#171c22;border:1px solid #292f36}.history-info span{display:block;color:#7f8994;font-size:9px;margin-bottom:3px}.history-info b{font-size:12px}.history-logos{margin-top:9px;color:#a9b2bb;font-size:10px;line-height:1.55}.history-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:11px}.history-actions button,.history-actions a{height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:10px;font-weight:850;cursor:pointer}.history-copy,.history-qty{border:1px solid #38414b;background:#181e24;color:#dce2e7}.history-buy{border:0;background:var(--orange);color:#fff}.history-download{border:0;background:#2a3139;color:#fff}.history-delete{grid-column:1/-1;border:1px solid #4d3035!important;background:#211417!important;color:#ff9ca5!important}
-@media(max-width:700px){.logo-grid{grid-template-columns:repeat(2,1fr)}.preview-grid{grid-template-columns:1fr}.stage{min-height:360px;padding:15px}.seat-sim-wrap{padding:8px}.quote{position:static}.item{grid-template-columns:28px 58px 1fr 70px}.thumb{width:58px}.del{grid-column:auto}.hero h1{font-size:33px}.history-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.controls{grid-template-columns:1fr}.logo-grid{grid-template-columns:repeat(2,1fr)}.preview-grid{grid-template-columns:1fr}.stage{min-height:360px;padding:15px}.seat-sim-wrap{padding:8px}.quote{position:static}.item{grid-template-columns:28px 58px 1fr 70px}.thumb{width:58px}.del{grid-column:auto}.hero h1{font-size:33px}.history-grid{grid-template-columns:1fr}}
 
 .logo-tools{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:0 0 14px}.logo-search{flex:1 1 220px;height:40px;border:1px solid var(--line);border-radius:10px;background:#0e1217;color:#eef2f5;padding:0 13px;outline:none}.logo-search:focus{border-color:var(--orange)}.logo-filter{height:40px;border:1px solid var(--line);border-radius:10px;background:#0e1217;color:#d8dee4;padding:0 10px}.fav-only{height:40px;border:1px solid var(--line);border-radius:10px;background:#171c22;color:#d8dee4;padding:0 12px;font-weight:800;cursor:pointer}.fav-only.active{border-color:#f6c453;color:#f6c453;background:#211d12}.logo-fav{position:absolute;left:6px;top:5px;border:0;background:rgba(5,7,9,.72);color:#8f99a4;width:23px;height:23px;border-radius:50%;font-size:15px;line-height:1;cursor:pointer;z-index:2}.logo-fav.on{color:#ffd45b}.logo-empty{grid-column:1/-1;padding:28px;text-align:center;border:1px dashed #39414a;border-radius:11px;color:#7e8994;background:#0e1217;font-size:12px}.logo-count-note{font-size:10px;color:#7f8994}.manage-link{color:#ff9b78;text-decoration:none;font-size:10px;font-weight:800}.manage-link:hover{text-decoration:underline}
 
@@ -49,7 +49,7 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 <main>
 <section class="section">
 <div class="head"><div class="title"><div class="n">1</div><div><h2>제작 규격</h2><div class="sub">완성될 로고의 가로폭과 로고 사이 간격을 설정하세요.</div></div></div></div>
-<div class="controls"><div><label>로고 폭</label><select id="width"><option value="150">150 mm</option><option value="160">160 mm</option><option value="170">170 mm</option><option value="180">180 mm</option><option value="190">190 mm</option><option value="200">200 mm</option><option value="210">210 mm</option><option value="220" selected>220 mm</option><option value="230">230 mm</option><option value="240">240 mm</option><option value="250">250 mm</option><option value="260">260 mm</option><option value="280">280 mm</option><option value="300">300 mm</option></select></div><div><label>로고 사이 간격</label><select id="gap"><option value="10">10 mm</option><option value="15" selected>15 mm</option><option value="20">20 mm</option><option value="25">25 mm</option></select></div></div>
+<div class="controls"><div><label>시트 색상</label><select id="decalColor"><option value="white" selected>백색 시트</option><option value="black">검정 시트</option></select></div><div><label>로고 폭</label><select id="width"><option value="150">150 mm</option><option value="160">160 mm</option><option value="170">170 mm</option><option value="180">180 mm</option><option value="190">190 mm</option><option value="200">200 mm</option><option value="210">210 mm</option><option value="220" selected>220 mm</option><option value="230">230 mm</option><option value="240">240 mm</option><option value="250">250 mm</option><option value="260">260 mm</option><option value="280">280 mm</option><option value="300">300 mm</option></select></div><div><label>로고 사이 간격</label><select id="gap"><option value="10">10 mm</option><option value="15" selected>15 mm</option><option value="20">20 mm</option><option value="25">25 mm</option></select></div></div>
 <div class="note">
 구매자가 선택한 값이 <b>모든 로고의 실제 가로폭</b>이 됩니다.<br>
 제작 시 좌우에 각 20mm씩 총 40mm의 작업 여유를 추가하며, 이 여유폭은 가격에 포함하지 않습니다.
@@ -61,7 +61,7 @@ main{padding:20px}.section{background:rgba(19,23,28,.97);border:1px solid var(--
 <section class="section"><div class="head"><div class="title"><div class="n">3</div><div><h2>순서 및 개별 크기</h2><div class="sub">모든 디자인은 선택한 로고 폭으로 동일하게 제작되며, 항목을 드래그해 순서만 변경할 수 있습니다.</div></div></div></div><div id="list" class="list"></div></section>
 
 <section class="section"><div class="head"><div class="title"><div class="n">4</div><div><h2>실시간 미리보기 및 견적</h2><div class="sub">실제 PNG 비율을 사용해 자동 계산합니다.</div></div></div></div>
-<div class="preview-grid"><div class="preview-stack"><div class="preview-card"><div class="preview-card-head"><b>제작용 배치 미리보기</b><span>실제 재단 배치 기준</span></div><div class="stage"><div id="sheet" class="sheet"></div></div></div><div class="preview-card"><div class="preview-card-head"><b>시트 뒷면 적용 시뮬레이션</b><span>기준 영역 300 × 500mm</span></div><div class="seat-sim-wrap"><div class="seat-sim"><img src="seat_back_mockup.png" alt="레이싱 시트 뒷면 적용 예시"><div id="seatZone" class="seat-zone"></div></div></div><div class="seat-scale-note"><b>적용 예시:</b> 선택한 로고 폭과 간격을 300 × 500mm 기준 영역에 비례해 표시합니다. 실제 시트 형상과 촬영 환경에 따라 차이가 있을 수 있습니다.</div></div></div><aside class="quote"><div class="ql">ESTIMATED PRICE</div><div id="price" class="price">15,000원</div><div id="priceNote" style="display:none;margin:-10px 0 14px;color:#ff9b78;font-size:11px;font-weight:800">최소 주문금액이 적용되었습니다.</div><div class="row"><span>선택 로고 폭</span><b id="logoWidthText">220 mm</b></div><div class="row"><span>선택 로고 간격</span><b id="logoGapText">15 mm</b></div><div class="row"><span>총 로고 높이</span><b id="totalLogoHeight">0 mm</b></div><div class="row"><span>간격 합계</span><b id="totalGapHeight">0 mm</b></div><div class="row"><span>예상 제작 길이</span><b id="totalLength">0 mm</b></div><div class="row"><span>가격 계산 면적</span><b id="area">0 cm²</b></div><div class="row"><span>스마트스토어 주문 수량</span><b id="orderQty">500</b></div><div class="row"><span>선택 디자인</span><b id="qcnt">0개</b></div><div class="row"><span>면적 단가</span><b>20원/cm²</b></div><div class="row"><span>최소 주문금액</span><b>10,000원</b></div><div class="formula">로고 폭 × 제작 높이 ÷ 100 × 20원<br><span style="color:#87919c">좌우 여유폭 40mm는 가격에서 제외</span></div><div id="warn" class="warn">최대 제작 높이 1,000mm를 초과했습니다. 디자인 개수를 줄이거나 로고 폭을 줄여주세요.</div><div id="okay" class="okay">제작 가능한 구성입니다.</div><div class="order-help"><b>주문 방법</b><br>구성을 저장하면 견적번호가 복사됩니다. 스마트스토어에서는 아래에 표시된 <b>주문 수량</b>을 입력하고, 구매자 요청사항에는 <b>견적번호</b>만 붙여넣으세요.</div><button id="order" class="action" disabled>견적 저장 후 주문하기</button><button id="copy" class="secondary">주문정보 복사</button><button id="reset" class="secondary">처음부터 다시 만들기</button></aside></div>
+<div class="preview-grid"><div class="preview-stack"><div class="preview-card"><div class="preview-card-head"><b>제작용 배치 미리보기</b><span>실제 재단 배치 기준</span></div><div class="stage"><div id="sheet" class="sheet"></div></div></div><div class="preview-card"><div class="preview-card-head"><b>시트 뒷면 적용 시뮬레이션</b><span>기준 영역 300 × 500mm</span></div><div class="seat-sim-wrap"><div class="seat-sim"><img src="seat_back_mockup.png" alt="레이싱 시트 뒷면 적용 예시"><div id="seatZone" class="seat-zone"></div></div></div><div class="seat-scale-note"><b>적용 예시:</b> 선택한 로고 폭과 간격을 300 × 500mm 기준 영역에 비례해 표시합니다. 실제 시트 형상과 촬영 환경에 따라 차이가 있을 수 있습니다.</div></div></div><aside class="quote"><div class="ql">ESTIMATED PRICE</div><div id="price" class="price">15,000원</div><div id="priceNote" style="display:none;margin:-10px 0 14px;color:#ff9b78;font-size:11px;font-weight:800">최소 주문금액이 적용되었습니다.</div><div class="row"><span>선택 시트 색상</span><b id="decalColorText">백색</b></div><div class="row"><span>선택 로고 폭</span><b id="logoWidthText">220 mm</b></div><div class="row"><span>선택 로고 간격</span><b id="logoGapText">15 mm</b></div><div class="row"><span>총 로고 높이</span><b id="totalLogoHeight">0 mm</b></div><div class="row"><span>간격 합계</span><b id="totalGapHeight">0 mm</b></div><div class="row"><span>예상 제작 길이</span><b id="totalLength">0 mm</b></div><div class="row"><span>가격 계산 면적</span><b id="area">0 cm²</b></div><div class="row"><span>스마트스토어 주문 수량</span><b id="orderQty">500</b></div><div class="row"><span>선택 디자인</span><b id="qcnt">0개</b></div><div class="row"><span>면적 단가</span><b>20원/cm²</b></div><div class="row"><span>최소 주문금액</span><b>10,000원</b></div><div class="formula">로고 폭 × 제작 높이 ÷ 100 × 20원<br><span style="color:#87919c">좌우 여유폭 40mm는 가격에서 제외</span></div><div id="warn" class="warn">최대 제작 높이 1,000mm를 초과했습니다. 디자인 개수를 줄이거나 로고 폭을 줄여주세요.</div><div id="okay" class="okay">제작 가능한 구성입니다.</div><div class="order-help"><b>주문 방법</b><br>구성을 저장하면 견적번호가 복사됩니다. 스마트스토어에서는 아래에 표시된 <b>주문 수량</b>을 입력하고, 구매자 요청사항에는 <b>견적번호</b>만 붙여넣으세요.</div><button id="order" class="action" disabled>견적 저장 후 주문하기</button><button id="copy" class="secondary">주문정보 복사</button><button id="reset" class="secondary">처음부터 다시 만들기</button></aside></div>
 </section>
 </main>
 <div class="footer"><b style="color:#d9dfe5">제작 안내</b><br>국내산 백색 커팅 시트를 플로터로 재단한 후 위딩 작업과 전사필름 부착까지 완료하여 발송합니다. 선택한 로고 폭에 좌우 각 20mm의 작업 여유를 추가해 제작하며, 이 40mm 여유폭은 가격 계산에서 제외됩니다. 인쇄 및 코팅 제품이 아닙니다.</div>
@@ -167,8 +167,8 @@ async function init(){
    console.error(err);
  }
  setupLogoTools();setupAdminMode();renderLogoGrid();
- $('width').onchange=render;$('gap').onchange=render;
- $('reset').onclick=()=>{selected=[];$('width').value='220';$('gap').value='15';render()};
+ $('decalColor').onchange=render;$('width').onchange=render;$('gap').onchange=render;
+ $('reset').onclick=()=>{selected=[];$('decalColor').value='white';$('width').value='220';$('gap').value='15';render()};
  $('copy').onclick=copyInfo;$('order').onclick=createQuoteAndOrder;$('modalCopy').onclick=()=>copyQuoteNumber(currentQuoteNumber);$('modalQtyCopy').onclick=()=>copyOrderQuantity(currentOrderQuantity);$('modalGo').onclick=goToSmartStore;
  $('modalClose').onclick=closeOrderModal;$('orderModal').onclick=e=>{if(e.target===$('orderModal'))closeOrderModal()};
  $('clearHistory').onclick=clearQuoteHistory;
@@ -223,7 +223,7 @@ function formatSelectedDesignsForQuote(){
 }
 
 function calc(){
- const logoWidth=+$('width').value,gap=+$('gap').value,sheetWidth=logoWidth+40;
+ const decalColor=$('decalColor').value,logoWidth=+$('width').value,gap=+$('gap').value,sheetWidth=logoWidth+40;
  const rows=[];
  selected.forEach(x=>{const qty=Math.max(1,Number(x.qty)||1),w=logoWidth,lh=w/x.ratio;for(let copy=1;copy<=qty;copy++)rows.push({...x,qty,copy,w,h:lh})});
  const totalLogoHeight=rows.reduce((sum,row)=>sum+row.h,0);
@@ -234,13 +234,13 @@ function calc(){
  const orderQty=Math.max(500,area);
  const raw=area*30;
  const price=orderQty*20;
- return{logoWidth,sheetWidth,gap,h,exactH,totalLogoHeight,totalGapHeight,area,orderQty,rawPrice:Math.round(raw),price,minimumApplied:area<500,rows,over:exactH>1000,totalDecals:rows.length}
+ return{decalColor,logoWidth,sheetWidth,gap,h,exactH,totalLogoHeight,totalGapHeight,area,orderQty,rawPrice:Math.round(raw),price,minimumApplied:area<500,rows,over:exactH>1000,totalDecals:rows.length}
 }
 function render(){
  renderLogoActiveState();
  $('cnt').textContent=selected.reduce((n,x)=>n+(x.qty||1),0);
  renderList();const d=calc();renderSheet(d);renderSeat(d);
- $('price').textContent=d.price.toLocaleString('ko-KR')+'원';$('priceNote').style.display=(d.minimumApplied&&selected.length)?'block':'none';$('logoWidthText').textContent=d.logoWidth+' mm';$('logoGapText').textContent=d.gap+' mm';$('totalLogoHeight').textContent=(selected.length?d.totalLogoHeight.toFixed(1):'0')+' mm';$('totalGapHeight').textContent=(selected.length?d.totalGapHeight.toFixed(1):'0')+' mm';$('totalLength').textContent=(selected.length?d.exactH.toFixed(1):'0')+' mm';$('area').textContent=d.area.toLocaleString('ko-KR',{maximumFractionDigits:0})+' cm²';$('orderQty').textContent=d.orderQty.toLocaleString('ko-KR');$('qcnt').textContent=selected.length+'종 / '+d.totalDecals+'장';
+ $('price').textContent=d.price.toLocaleString('ko-KR')+'원';$('decalColorText').textContent=d.decalColor==='black'?'검정':'백색';$('priceNote').style.display=(d.minimumApplied&&selected.length)?'block':'none';$('logoWidthText').textContent=d.logoWidth+' mm';$('logoGapText').textContent=d.gap+' mm';$('totalLogoHeight').textContent=(selected.length?d.totalLogoHeight.toFixed(1):'0')+' mm';$('totalGapHeight').textContent=(selected.length?d.totalGapHeight.toFixed(1):'0')+' mm';$('totalLength').textContent=(selected.length?d.exactH.toFixed(1):'0')+' mm';$('area').textContent=d.area.toLocaleString('ko-KR',{maximumFractionDigits:0})+' cm²';$('orderQty').textContent=d.orderQty.toLocaleString('ko-KR');$('qcnt').textContent=selected.length+'종 / '+d.totalDecals+'장';
  $('warn').style.display=d.over?'block':'none';$('okay').style.display=(!d.over&&selected.length)?'block':'none';$('order').disabled=d.over||!selected.length
 }
 const visualCenterCache=new Map();
@@ -317,7 +317,7 @@ function renderSeat(d){
 
    const img=document.createElement('img');img.src=row.src;img.alt=row.name;
    img.style.width=(row.w*pxPerMm)+'px';
-   img.style.height=(row.h*pxPerMm)+'px';
+   img.style.height=(row.h*pxPerMm)+'px';img.style.filter=d.decalColor==='black'?'brightness(0) drop-shadow(0 0 1px rgba(255,255,255,.65))':'drop-shadow(0 1px 1px rgba(0,0,0,.5))';
 
    // PNG 내부의 좌우 투명 여백까지 분석해 실제 보이는 로고 중심을 맞춥니다.
    // 단, 점선 좌우 경계를 넘지 않는 범위까지만 이동합니다.
@@ -349,7 +349,7 @@ function renderSeat(d){
        rowWrap.style.marginBottom=i<d.rows.length-1?(d.gap*pxPerMm)+'px':'0px';
        const img=rowWrap.querySelector('img');
        img.style.width=(row.w*pxPerMm)+'px';
-       img.style.height=(row.h*pxPerMm)+'px';
+       img.style.height=(row.h*pxPerMm)+'px';img.style.filter=d.decalColor==='black'?'brightness(0) drop-shadow(0 0 1px rgba(255,255,255,.65))':'drop-shadow(0 1px 1px rgba(0,0,0,.5))';
        const imageWidth=row.w*pxPerMm;
        const freeSide=Math.max(0,(zone.clientWidth-imageWidth)/2-1);
        const maxShiftPercent=imageWidth>0?Math.min(12,(freeSide/imageWidth)*100):0;
@@ -416,13 +416,13 @@ function renderList(){
  e.ondragstart=()=>e.classList.add('dragging');e.ondragend=()=>e.classList.remove('dragging');e.ondragover=ev=>{ev.preventDefault();e.classList.add('over')};e.ondragleave=()=>e.classList.remove('over');e.ondrop=ev=>{ev.preventDefault();document.querySelectorAll('.item').forEach(z=>z.classList.remove('over'));const dragging=[...document.querySelectorAll('.item')].find(z=>z.classList.contains('dragging'));if(!dragging)return;const from=+dragging.dataset.i;const moved=selected.splice(from,1)[0];selected.splice(i,0,moved);render()};enableMobileSort(e);l.appendChild(e)})
 }
 function renderSheet(d){
- const s=$('sheet');s.innerHTML='';s.style.width=Math.max(180,d.sheetWidth*.85)+'px';
+ const s=$('sheet');s.innerHTML='';s.style.width=Math.max(180,d.sheetWidth*.85)+'px';s.style.background=d.decalColor==='black'?'#e8eaed':'#24282d';
  if(!selected.length){s.style.minHeight='175px';s.innerHTML='<div class="sheetempty">디자인을 선택하면<br>미리보기가 표시됩니다.</div>';return}
  const ps=.72;s.style.minHeight=Math.max(175,Math.min(740,d.h*ps))+'px';
- d.rows.forEach((r,i)=>{const im=document.createElement('img');im.src=r.src;im.alt=r.name;im.style.width=(r.w/d.sheetWidth*100)+'%';im.style.height='auto';im.style.flex='0 0 auto';s.appendChild(im);if(i<d.rows.length-1){const g=document.createElement('div');g.style.height=Math.max(5,d.gap*ps)+'px';g.style.flex='0 0 auto';s.appendChild(g)}})
+ d.rows.forEach((r,i)=>{const im=document.createElement('img');im.src=r.src;im.alt=r.name;im.style.width=(r.w/d.sheetWidth*100)+'%';im.style.height='auto';im.style.flex='0 0 auto';im.style.filter=d.decalColor==='black'?'brightness(0)':'none';s.appendChild(im);if(i<d.rows.length-1){const g=document.createElement('div');g.style.height=Math.max(5,d.gap*ps)+'px';g.style.flex='0 0 auto';s.appendChild(g)}})
 }
 function text(){const d=calc();return `[RIGFORGE Seat Decal 주문정보]
-디자인 순서: ${selected.map((x,i)=>`${i+1}. ${x.name} × ${x.qty||1}`).join(' / ')}
+시트 색상: ${d.decalColor==='black'?'검정':'백색'}\n디자인 순서: ${selected.map((x,i)=>`${i+1}. ${x.name} × ${x.qty||1}`).join(' / ')}
 선택 로고 폭: ${d.logoWidth}mm
 총 길이: ${d.h}mm
 좌우 제작 여유: 각 20mm (가격 제외)
@@ -444,7 +444,8 @@ function quotePayload(quoteNo){
  return {
    quote_no:quoteNo,
    created_at:new Date().toISOString(),
-   builder_version:'v13.7-history-totalheight-email-fixed',
+   builder_version:'v13.8-decal-color-selection',
+   decal_color:d.decalColor,
    logo_width_mm:d.logoWidth,
    gap_mm:d.gap,
    total_height_mm:d.h,
@@ -477,6 +478,12 @@ function formatLocalDate(iso){
 
 function loadImage(src){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src})}
 function roundedRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
+function drawLogoWithColor(ctx,img,x,y,w,h,color){
+ if(color!=='black'){ctx.drawImage(img,x,y,w,h);return}
+ const c=document.createElement('canvas');c.width=Math.max(1,Math.round(w));c.height=Math.max(1,Math.round(h));
+ const cx=c.getContext('2d');cx.drawImage(img,0,0,c.width,c.height);cx.globalCompositeOperation='source-in';cx.fillStyle='#000';cx.fillRect(0,0,c.width,c.height);
+ ctx.drawImage(c,x,y,w,h);
+}
 async function createQuotePreviewImage(payload){
  const W=1000,pad=54,contentW=W-pad*2;
  const previewW=600;
@@ -486,7 +493,7 @@ async function createQuotePreviewImage(payload){
  const previewBoxH=Math.max(260,previewInnerH+72);
  const listLineH=33;
  const listH=Math.max(90,payload.logos.length*listLineH+44);
- const infoH=390;
+ const infoH=440;
  const H=Math.ceil(190+previewBoxH+36+listH+30+infoH+90);
  const c=document.createElement('canvas');c.width=W;c.height=H;const ctx=c.getContext('2d');
  const grad=ctx.createLinearGradient(0,0,0,H);grad.addColorStop(0,'#090b0e');grad.addColorStop(.58,'#141920');grad.addColorStop(1,'#090b0e');ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);
@@ -501,11 +508,11 @@ async function createQuotePreviewImage(payload){
  ctx.strokeStyle='#2a3038';ctx.lineWidth=2;ctx.strokeRect(pad,y,contentW,previewBoxH);
  ctx.fillStyle='#87919c';ctx.font='800 14px Arial,"Noto Sans KR",sans-serif';ctx.fillText('DESIGN PREVIEW',pad+24,y+31);
  const sheetW=previewW+72,sheetX=pad+(contentW-sheetW)/2,sheetY=y+50;
- ctx.fillStyle='#272c32';roundedRect(ctx,sheetX,sheetY,sheetW,previewInnerH+32,7);
+ ctx.fillStyle=payload.decal_color==='black'?'#eceff1':'#272c32';roundedRect(ctx,sheetX,sheetY,sheetW,previewInnerH+32,7);
  let py=sheetY+16;
  for(let i=0;i<scaled.length;i++){
    const x=scaled[i];
-   try{const im=await loadImage(x.src);ctx.drawImage(im,sheetX+36,py,previewW,x.height);py+=x.height+(i<scaled.length-1?gapPx:0)}catch(e){}
+   try{const im=await loadImage(x.src);drawLogoWithColor(ctx,im,sheetX+36,py,previewW,x.height,payload.decal_color);py+=x.height+(i<scaled.length-1?gapPx:0)}catch(e){}
  }
  y+=previewBoxH+26;
 
@@ -527,13 +534,13 @@ async function createQuotePreviewImage(payload){
  ctx.fillStyle='#0d1116';roundedRect(ctx,pad,y,contentW,infoH,16);
  ctx.fillStyle='#f4f6f8';ctx.font='900 18px Arial,"Noto Sans KR",sans-serif';ctx.fillText('구성 설정 및 주문 정보',pad+24,y+35);
  const leftX=pad+24,rightX=pad+contentW/2+10,colW=contentW/2-44;
- const leftRows=[['로고 폭',payload.logo_width_mm+' mm'],['디자인 간격',payload.gap_mm+' mm'],['전체 디자인 높이',payload.total_height_mm+' mm'],['실제 제작 폭',payload.actual_sheet_width_mm+' mm'],['좌우 제작 여유','각 20 mm']];
+ const leftRows=[['시트 색상',payload.decal_color==='black'?'검정':'백색'],['로고 폭',payload.logo_width_mm+' mm'],['디자인 간격',payload.gap_mm+' mm'],['전체 디자인 높이',payload.total_height_mm+' mm'],['실제 제작 폭',payload.actual_sheet_width_mm+' mm'],['좌우 제작 여유','각 20 mm']];
  const rightRows=[['가격 계산 면적',payload.calculated_area_cm2.toLocaleString('ko-KR')+' cm²'],['스마트스토어 주문 수량',payload.order_quantity.toLocaleString('ko-KR')],['면적 단가','20원/cm²'],['결제 예정금액',payload.total_price_krw.toLocaleString('ko-KR')+'원'],['최소금액 적용',payload.minimum_applied?'예':'아니오']];
  function drawRows(rows,x){let ry=y+62;rows.forEach(([k,v])=>{ctx.strokeStyle='#292f36';ctx.beginPath();ctx.moveTo(x,ry);ctx.lineTo(x+colW,ry);ctx.stroke();ctx.fillStyle='#8e98a3';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(k,x,ry+28);ctx.textAlign='right';ctx.fillStyle='#fff';ctx.font='700 14px Arial,"Noto Sans KR",sans-serif';ctx.fillText(v,x+colW,ry+28);ctx.textAlign='left';ry+=50})}
  drawRows(leftRows,leftX);drawRows(rightRows,rightX);
- ctx.fillStyle='#171c22';roundedRect(ctx,pad+24,y+320,contentW-48,54,10);
- ctx.fillStyle='#ff9a75';ctx.font='800 13px Arial,"Noto Sans KR",sans-serif';ctx.fillText('제작 사양',pad+40,y+343);
- ctx.fillStyle='#c5ccd3';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText('국내산 백색 커팅 시트 · 플로터 재단 · 위딩 · 전사필름 포함 · 인쇄/코팅 아님',pad+125,y+343);
+ ctx.fillStyle='#171c22';roundedRect(ctx,pad+24,y+370,contentW-48,54,10);
+ ctx.fillStyle='#ff9a75';ctx.font='800 13px Arial,"Noto Sans KR",sans-serif';ctx.fillText('제작 사양',pad+40,y+393);
+ ctx.fillStyle='#c5ccd3';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(`국내산 ${payload.decal_color==='black'?'검정':'백색'} 커팅 시트 · 플로터 재단 · 위딩 · 전사필름 포함 · 인쇄/코팅 아님`,pad+125,y+393);
  ctx.fillStyle='#7f8994';ctx.font='12px Arial,"Noto Sans KR",sans-serif';ctx.fillText('스마트스토어 구매자 요청사항에는 위 견적번호를 입력해 주세요.',pad,H-42);
  return new Promise(resolve=>c.toBlob(blob=>resolve({blob,dataUrl:c.toDataURL('image/jpeg',.9)}),'image/jpeg',.9));
 }
@@ -549,7 +556,7 @@ function renderQuoteHistory(){
    const totalHeight=unitHeight*qty;
    return `${x.name} × ${qty}장 (${width.toFixed(0)} × ${unitHeight.toFixed(1)}mm / 로고 높이 합계 ${totalHeight.toFixed(1)}mm)`;
  }).join('<br>');
- card.innerHTML=`${q.preview_image?`<img class="history-preview" src="${q.preview_image}" alt="${q.quote_no} 미리보기">`:'<div class="history-preview" style="display:grid;place-items:center;color:#68727d;font-size:12px">미리보기 이미지 없음</div>'}<div class="history-body"><div class="history-no">${q.quote_no}</div><div class="history-date">${formatLocalDate(q.created_at)}</div><div class="history-info"><div><span>주문 수량</span><b>${Number(q.order_quantity).toLocaleString('ko-KR')}</b></div><div><span>결제금액</span><b>${Number(q.total_price_krw).toLocaleString('ko-KR')}원</b></div><div><span>로고 폭</span><b>${q.logo_width_mm} mm</b></div><div><span>총 길이</span><b>${q.total_height_mm} mm</b></div></div><div class="history-logos">${logos}</div><div class="history-actions"><button class="history-copy">견적번호 복사</button><button class="history-qty">수량 복사</button><button class="history-buy">구매하기</button>${q.preview_image?`<a class="history-download" href="${q.preview_image}" download="${q.quote_no}.jpg">이미지 저장</a>`:'<button class="history-download" disabled>이미지 없음</button>'}<button class="history-delete">이 견적 삭제</button></div></div>`;
+ card.innerHTML=`${q.preview_image?`<img class="history-preview" src="${q.preview_image}" alt="${q.quote_no} 미리보기">`:'<div class="history-preview" style="display:grid;place-items:center;color:#68727d;font-size:12px">미리보기 이미지 없음</div>'}<div class="history-body"><div class="history-no">${q.quote_no}</div><div class="history-date">${formatLocalDate(q.created_at)}</div><div class="history-info"><div><span>주문 수량</span><b>${Number(q.order_quantity).toLocaleString('ko-KR')}</b></div><div><span>결제금액</span><b>${Number(q.total_price_krw).toLocaleString('ko-KR')}원</b></div><div><span>시트 색상</span><b>${q.decal_color==='black'?'검정':'백색'}</b></div><div><span>로고 폭</span><b>${q.logo_width_mm} mm</b></div><div><span>총 길이</span><b>${q.total_height_mm} mm</b></div></div><div class="history-logos">${logos}</div><div class="history-actions"><button class="history-copy">견적번호 복사</button><button class="history-qty">수량 복사</button><button class="history-buy">구매하기</button>${q.preview_image?`<a class="history-download" href="${q.preview_image}" download="${q.quote_no}.jpg">이미지 저장</a>`:'<button class="history-download" disabled>이미지 없음</button>'}<button class="history-delete">이 견적 삭제</button></div></div>`;
  card.querySelector('.history-copy').onclick=()=>copyQuoteNumber(q.quote_no);card.querySelector('.history-qty').onclick=()=>copyOrderQuantity(q.order_quantity);card.querySelector('.history-buy').onclick=()=>window.open(SMARTSTORE_URL,'_blank','noopener,noreferrer');card.querySelector('.history-delete').onclick=()=>deleteQuote(q.quote_no);grid.appendChild(card)})
 }
 function deleteQuote(no){const next=getSavedQuotes().filter(q=>q.quote_no!==no);localStorage.setItem('rigforge_quotes',JSON.stringify(next));renderQuoteHistory();toast('견적 내역을 삭제했습니다.')}
@@ -574,6 +581,7 @@ async function sendQuoteEmail(payload){
    수신이메일:NOTIFICATION_EMAIL,
    디자인순서:logoText,
    선택디자인수:`${payload.logos.length}종 / ${totalDesignQuantity}장`,
+   시트색상:payload.decal_color==='black'?'검정':'백색',
    로고폭:`${payload.logo_width_mm} mm`,
    로고간격:`${payload.gap_mm} mm`,
    총길이:`${payload.total_height_mm} mm`,
