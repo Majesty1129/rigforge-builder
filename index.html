@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RIGFORGE GARAGE | Seat Decal Builder v13.6</title>
+<title>RIGFORGE GARAGE | Seat Decal Builder v13.7</title>
 <style>
 :root{--bg:#090b0e;--panel:#13171c;--panel2:#0e1217;--line:#2a3038;--text:#f4f6f8;--muted:#919ba6;--orange:#ff5a1f;--danger:#ff6572;--ok:#5bdda0}
 *{box-sizing:border-box}
@@ -444,7 +444,7 @@ function quotePayload(quoteNo){
  return {
    quote_no:quoteNo,
    created_at:new Date().toISOString(),
-   builder_version:'v13.6-history-quantity-unitprice-fixed',
+   builder_version:'v13.7-history-totalheight-email-fixed',
    logo_width_mm:d.logoWidth,
    gap_mm:d.gap,
    total_height_mm:d.h,
@@ -518,8 +518,9 @@ async function createQuotePreviewImage(payload){
    const lineY=y+70+i*listLineH;
    ctx.fillStyle='#ff8a60';ctx.font='800 13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(String(i+1).padStart(2,'0'),pad+25,lineY);
    const qty=Math.max(1,Number(x.quantity)||1);
+   const totalItemH=Number(itemH)*qty;
    ctx.fillStyle='#ffffff';ctx.font='700 14px Arial,"Noto Sans KR",sans-serif';ctx.fillText(`${x.name} × ${qty}장`,pad+67,lineY);
-   ctx.textAlign='right';ctx.fillStyle='#8f99a4';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(`폭 ${payload.logo_width_mm} mm / 높이 ${itemH} mm`,W-pad-24,lineY);ctx.textAlign='left';
+   ctx.textAlign='right';ctx.fillStyle='#8f99a4';ctx.font='13px Arial,"Noto Sans KR",sans-serif';ctx.fillText(`폭 ${payload.logo_width_mm} mm / 개당 높이 ${itemH} mm / 합계 ${totalItemH} mm`,W-pad-24,lineY);ctx.textAlign='left';
  });
  y+=listH+22;
 
@@ -543,8 +544,10 @@ function renderQuoteHistory(){
  quotes.forEach(q=>{const card=document.createElement('article');card.className='history-card';
  const logos=(q.logos||[]).map(x=>{
    const qty=Math.max(1,Number(x.quantity)||1);
-   const height=Number(q.logo_width_mm)/Number(x.ratio);
-   return `${x.name} × ${qty}장 (${Number(q.logo_width_mm).toFixed(0)} × ${height.toFixed(1)}mm)`;
+   const width=Number(q.logo_width_mm);
+   const unitHeight=width/Number(x.ratio);
+   const totalHeight=unitHeight*qty;
+   return `${x.name} × ${qty}장 (${width.toFixed(0)} × ${unitHeight.toFixed(1)}mm / 로고 높이 합계 ${totalHeight.toFixed(1)}mm)`;
  }).join('<br>');
  card.innerHTML=`${q.preview_image?`<img class="history-preview" src="${q.preview_image}" alt="${q.quote_no} 미리보기">`:'<div class="history-preview" style="display:grid;place-items:center;color:#68727d;font-size:12px">미리보기 이미지 없음</div>'}<div class="history-body"><div class="history-no">${q.quote_no}</div><div class="history-date">${formatLocalDate(q.created_at)}</div><div class="history-info"><div><span>주문 수량</span><b>${Number(q.order_quantity).toLocaleString('ko-KR')}</b></div><div><span>결제금액</span><b>${Number(q.total_price_krw).toLocaleString('ko-KR')}원</b></div><div><span>로고 폭</span><b>${q.logo_width_mm} mm</b></div><div><span>총 길이</span><b>${q.total_height_mm} mm</b></div></div><div class="history-logos">${logos}</div><div class="history-actions"><button class="history-copy">견적번호 복사</button><button class="history-qty">수량 복사</button><button class="history-buy">구매하기</button>${q.preview_image?`<a class="history-download" href="${q.preview_image}" download="${q.quote_no}.jpg">이미지 저장</a>`:'<button class="history-download" disabled>이미지 없음</button>'}<button class="history-delete">이 견적 삭제</button></div></div>`;
  card.querySelector('.history-copy').onclick=()=>copyQuoteNumber(q.quote_no);card.querySelector('.history-qty').onclick=()=>copyOrderQuantity(q.order_quantity);card.querySelector('.history-buy').onclick=()=>window.open(SMARTSTORE_URL,'_blank','noopener,noreferrer');card.querySelector('.history-delete').onclick=()=>deleteQuote(q.quote_no);grid.appendChild(card)})
@@ -556,14 +559,21 @@ function goToSmartStore(){window.open(SMARTSTORE_URL,'_blank','noopener,noreferr
 function closeOrderModal(){$('orderModal').classList.remove('show')}
 
 async function sendQuoteEmail(payload){
- const logoText=payload.logos.map(x=>`${x.order}. ${x.name}`).join(' / ');
+ const logoText=payload.logos.map(x=>{
+   const qty=Math.max(1,Number(x.quantity)||1);
+   const width=Number(payload.logo_width_mm);
+   const unitHeight=width/Number(x.ratio);
+   const totalHeight=unitHeight*qty;
+   return `${x.order}. ${x.name} × ${qty}장 (${width.toFixed(0)} × ${unitHeight.toFixed(1)}mm / 로고 높이 합계 ${totalHeight.toFixed(1)}mm)`;
+ }).join(' / ');
+ const totalDesignQuantity=payload.logos.reduce((sum,x)=>sum+Math.max(1,Number(x.quantity)||1),0);
  const formData={
    _subject:`[RIGFORGE 견적 생성 · 주문 미확인] ${payload.quote_no}`,
    견적번호:payload.quote_no,
    생성일시:formatLocalDate(payload.created_at),
    수신이메일:NOTIFICATION_EMAIL,
    디자인순서:logoText,
-   선택디자인수:`${payload.logos.length}개`,
+   선택디자인수:`${payload.logos.length}종 / ${totalDesignQuantity}장`,
    로고폭:`${payload.logo_width_mm} mm`,
    로고간격:`${payload.gap_mm} mm`,
    총길이:`${payload.total_height_mm} mm`,
