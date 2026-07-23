@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RIGFORGE GARAGE | Seat Decal Builder v13.4</title>
+<title>RIGFORGE GARAGE | Seat Decal Builder v13.5</title>
 <style>
 :root{--bg:#090b0e;--panel:#13171c;--panel2:#0e1217;--line:#2a3038;--text:#f4f6f8;--muted:#919ba6;--orange:#ff5a1f;--danger:#ff6572;--ok:#5bdda0}
 *{box-sizing:border-box}
@@ -444,7 +444,7 @@ function quotePayload(quoteNo){
  return {
    quote_no:quoteNo,
    created_at:new Date().toISOString(),
-   builder_version:'v7.7-no-redirect-copy-buttons',
+   builder_version:'v13.5-email-quantity-fixed',
    logo_width_mm:d.logoWidth,
    gap_mm:d.gap,
    total_height_mm:d.h,
@@ -551,14 +551,18 @@ function goToSmartStore(){window.open(SMARTSTORE_URL,'_blank','noopener,noreferr
 function closeOrderModal(){$('orderModal').classList.remove('show')}
 
 async function sendQuoteEmail(payload){
- const logoText=payload.logos.map(x=>`${x.order}. ${x.name}`).join(' / ');
+ const logoText=payload.logos.map(x=>{
+   const qty=Math.max(1,Number(x.quantity)||1);
+   const height=payload.logo_width_mm/Number(x.ratio);
+   return `${x.order}. ${x.name} × ${qty}장 (${payload.logo_width_mm} × ${height.toFixed(1)}mm)`;
+ }).join(' / ');
  const formData={
    _subject:`[RIGFORGE 견적 생성 · 주문 미확인] ${payload.quote_no}`,
    견적번호:payload.quote_no,
    생성일시:formatLocalDate(payload.created_at),
    수신이메일:NOTIFICATION_EMAIL,
    디자인순서:logoText,
-   선택디자인수:`${payload.logos.length}개`,
+   선택디자인수:`${payload.logos.length}종 / ${payload.logos.reduce((sum,x)=>sum+Math.max(1,Number(x.quantity)||1),0)}장`,
    로고폭:`${payload.logo_width_mm} mm`,
    로고간격:`${payload.gap_mm} mm`,
    총길이:`${payload.total_height_mm} mm`,
