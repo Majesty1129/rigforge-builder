@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RIGFORGE GARAGE | Seat Decal Builder v13.3</title>
+<title>RIGFORGE GARAGE | Seat Decal Builder v13.4</title>
 <style>
 :root{--bg:#090b0e;--panel:#13171c;--panel2:#0e1217;--line:#2a3038;--text:#f4f6f8;--muted:#919ba6;--orange:#ff5a1f;--danger:#ff6572;--ok:#5bdda0}
 *{box-sizing:border-box}
@@ -212,6 +212,16 @@ function renderLogoActiveState(){document.querySelectorAll('.logo').forEach(b=>b
 function toggleFavorite(id){favoriteLogoIds.has(id)?favoriteLogoIds.delete(id):favoriteLogoIds.add(id);localStorage.setItem('rigforge_favorite_logos',JSON.stringify([...favoriteLogoIds]));renderLogoGrid()}
 function toggle(l){const i=selected.findIndex(x=>x.id===l.id);i>=0?selected.splice(i,1):selected.push({...l,qty:1});render()}
 function changeQty(index,delta){const item=selected[index];if(!item)return;item.qty=Math.max(1,Math.min(99,(item.qty||1)+delta));render()}
+
+function formatSelectedDesignsForQuote(){
+  return selected.map((x,i)=>{
+    const qty=Math.max(1,Number(x.qty)||1);
+    const width=Number($('width').value);
+    const height=width/Number(x.ratio);
+    return `${i+1}. ${x.name} × ${qty}장 (${width.toFixed(0)} × ${height.toFixed(1)}mm)`;
+  }).join('\n');
+}
+
 function calc(){
  const logoWidth=+$('width').value,gap=+$('gap').value,sheetWidth=logoWidth+40;
  const rows=[];
