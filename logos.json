@@ -4,7 +4,7 @@
     "name": "Assetto Corsa Competizione",
     "file": "assetto-corsa-competizione.svg",
     "ratio": 3.098886901,
-    "productionHeightAt220": 71.0,
+    "productionHeightAt220": 71,
     "category": "Game",
     "tags": [
       "Game"
@@ -37,7 +37,7 @@
     "name": "SIM RACING PIT",
     "file": "sim-racing-pit.svg",
     "ratio": 6.287125718,
-    "productionHeightAt220": 35.0,
+    "productionHeightAt220": 35,
     "category": "Sim Hardware",
     "tags": [
       "Sim Hardware"
@@ -114,7 +114,7 @@
     "name": "Assetto Corsa Rally",
     "file": "assetto-corsa-rally.svg",
     "ratio": 3.668352941,
-    "productionHeightAt220": 60.0,
+    "productionHeightAt220": 60,
     "category": "Game",
     "tags": [
       "Game"
@@ -257,7 +257,7 @@
     "name": "LE MANS ULTIMATE",
     "file": "le-mans-ultimate.svg",
     "ratio": 4.400988003,
-    "productionHeightAt220": 50.0,
+    "productionHeightAt220": 50,
     "category": "Game",
     "tags": [
       "Game"
@@ -279,7 +279,7 @@
     "name": "F1",
     "file": "f1.svg",
     "ratio": 3.999871721,
-    "productionHeightAt220": 55.0,
+    "productionHeightAt220": 55,
     "category": "Motorsport",
     "tags": [
       "Motorsport"
@@ -290,7 +290,7 @@
     "name": "24h LE MANS",
     "file": "24h-le-mans.svg",
     "ratio": 1.53873865,
-    "productionHeightAt220": 143.0,
+    "productionHeightAt220": 143,
     "category": "Motorsport",
     "tags": [
       "Motorsport"
@@ -448,6 +448,17 @@
     "category": "Brake",
     "tags": [
       "Brake"
+    ]
+  },
+  {
+    "id": "buttkicker",
+    "name": "ButtKicker",
+    "file": "buttkicker.svg",
+    "ratio": 6.606843945,
+    "productionHeightAt220": 33.3,
+    "category": "Sim Hardware",
+    "tags": [
+      "Sim Hardware"
     ]
   }
 ]
