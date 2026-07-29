@@ -176,17 +176,6 @@
     ]
   },
   {
-    "id": "moza",
-    "name": "MOZA",
-    "file": "moza.svg",
-    "ratio": 9.529645477,
-    "productionHeightAt220": 23.1,
-    "category": "Sim Hardware",
-    "tags": [
-      "Sim Hardware"
-    ]
-  },
-  {
     "id": "logitech-g",
     "name": "Logitech G",
     "file": "logitech-g.svg",
@@ -456,6 +445,17 @@
     "file": "buttkicker.svg",
     "ratio": 6.606843945,
     "productionHeightAt220": 33.3,
+    "category": "Sim Hardware",
+    "tags": [
+      "Sim Hardware"
+    ]
+  },
+  {
+    "id": "moza-racing",
+    "name": "MOZA RACING",
+    "file": "moza-racing.svg",
+    "ratio": 4.867088114,
+    "productionHeightAt220": 45.2,
     "category": "Sim Hardware",
     "tags": [
       "Sim Hardware"
